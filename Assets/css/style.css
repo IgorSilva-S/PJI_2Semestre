@@ -40,6 +40,7 @@ header {
     justify-content: space-around;
     align-items: center;
     color: white;
+    z-index: 1000;
 }
 
 header h1 {
@@ -69,16 +70,17 @@ header h1 {
     width: 25%;
     height: 100%;
     position: fixed;
-    left: -22%;
+    left: -25%;
     top: 0;
     background-color: #0f5f5366;
     backdrop-filter: blur(20px);
     z-index: 1000;
     color: var(--texts);
     transition-duration: .2s;
+    z-index: 1002;
 }
 
-.exitbar {
+.lbar .exitbar {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -92,7 +94,37 @@ header h1 {
     background-image: url(../img/Arrow.png);
     transition-delay: .2s;
     transition-duration: .5s;
-    transform: rotate(180deg);
+}
+
+.barButton {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: calc(50% - 35px);
+    left: -25px;
+    background-color: var(--blackGreen);
+    border-radius: 0 50% 50% 0;
+    z-index: 1001;
+}
+
+.barButton .exitbar {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 2%;
+    top: calc(50% - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/Arrow.png);
+    transition-delay: .2s;
+    transition-duration: .5s;
+    rotate: 180deg;
 }
 
 
@@ -103,7 +135,6 @@ header select {
 
 section {
     width: calc(100vw - 3%);
-    margin-left: 4%;
     margin-top: 100px;
 }
 
@@ -112,16 +143,36 @@ section {
     height: 75vh;
     background-color: var(--rosePink);
     border-radius: 0 0 20px 20px;
-    margin-left: -4.1%;
-    padding-left: 4%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background-size: 100%;
+    background-position: bottom;
+    background-image: url(../img/BackgroundTextureBottom.png);
+    background-repeat: no-repeat;
 }
 
 .startBoxStyle h1 {
-    font-size: 40px;
+    font-size: 50px;
     position: relative;
+    margin: 20px 0;
+}
+
+.startBoxStyle h1::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 5px;
+    left: 0;
+    bottom: -10px;
+    background-color: black;
+    border-radius: 100px;
+
+}
+
+.startBoxStyle p {
+    font-size: 30px;
     text-decoration: underline;
 }

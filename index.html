@@ -10,30 +10,37 @@
 
 <body>
     <div class="lbar">
+        <div class="exitbar" onclick="closeLbar()">
+        </div>
+    </div>
+    <div class="barButton" onclick="openLbar()">
         <div class="exitbar">
         </div>
     </div>
     <header>
         <div class="logo"></div>
-        <h1>Bem-Vindo(a)</h1>
+        <h1>Nome</h1>
         <div class="langChoose">
             <ion-icon name="earth-outline"></ion-icon>
             <select name="language" id="language">
                 <option value="PTBR">PT-BR</option>
                 <option value="EN">EN-US</option>
-              </select>
+            </select>
         </div>
     </header>
 
-    <!--Início--> 
+    <!--Início-->
     <section>
         <div class="startBoxStyle">
             <h1>Bem-vindo(a)</h1>
+            <p>Conheça algumas novidades sobre o meio ambiente
+                e ajude-o no seu dia a dia</p>
         </div>
     </section>
 </body>
 <!--IonIcons-->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="Assets/js/script.js"></script>
 
 </html>
