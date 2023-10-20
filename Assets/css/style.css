@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -12,6 +15,9 @@
     --smokedWhite: #ede8ea;
     --texts: #f0f8ff;
 
+    /*Fontes*/
+    --normalText: 'Quicksand', sans-serif;
+    --headerText: 'Great Vibes', cursive;
 }
 
 body {
@@ -20,7 +26,7 @@ body {
 
 html {
     overflow-x: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--normalText);
 }
 
 header {
@@ -36,6 +42,9 @@ header {
     color: white;
 }
 
+header h1 {
+    font-family: var(--headerText);
+}
 
 .logo {
     width: 80px;
@@ -94,6 +103,25 @@ header select {
 
 section {
     width: calc(100vw - 3%);
-    margin-left: 3%;
+    margin-left: 4%;
     margin-top: 100px;
+}
+
+.startBoxStyle {
+    width: 100vw;
+    height: 75vh;
+    background-color: var(--rosePink);
+    border-radius: 0 0 20px 20px;
+    margin-left: -4.1%;
+    padding-left: 4%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startBoxStyle h1 {
+    font-size: 40px;
+    position: relative;
+    text-decoration: underline;
 }
