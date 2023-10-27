@@ -14,6 +14,12 @@
     --rosePink: #efaa9c;
     --smokedWhite: #ede8ea;
     --texts: #f0f8ff;
+    /*Cores transparentes*/
+    --translucentBlackGreen: #0f5f5377;
+    --translucentWhiteGreen: #35773877;
+    --translucentGroundBrown: #50353077;
+    --translucentRosePink: #efaa9c77;
+    --translucentSmokedWhite: #ede8ea77;
 
     /*Fontes*/
     --normalText: 'Quicksand', sans-serif;
@@ -22,6 +28,14 @@
 
 body {
     background: var(--smokedWhite);
+    background-size: 100%;
+    background-position: bottom;
+    background-image: url(../img/BackgroundTextureBottom.png);
+    background-repeat: no-repeat;
+    padding-bottom: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 html {
@@ -33,7 +47,6 @@ header {
     width: 100vw;
     height: 100px;
     background-color: var(--blackGreen);
-    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -133,25 +146,13 @@ header select {
     padding: 2px;
 }
 
-section {
-    width: calc(100vw - 3%);
-    margin-top: 100px;
-}
 
 .startBoxStyle {
     width: 100vw;
-    height: 75vh;
-    background-color: var(--rosePink);
-    border-radius: 0 0 20px 20px;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-size: 100%;
-    background-position: bottom;
-    background-image: url(../img/BackgroundTextureBottom.png);
-    background-repeat: no-repeat;
 }
 
 .startBoxStyle h1 {
@@ -175,4 +176,37 @@ section {
 .startBoxStyle p {
     font-size: 30px;
     text-decoration: underline;
+}
+
+.items {
+    width: 98%;
+    height: 300px;
+    border-radius: 8px;
+    margin: 10px 0;
+    transition-duration: .2s;
+    display: flex;
+}
+
+.items:hover{
+    background-color: var(--translucentRosePink);
+}
+
+.imageItems {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.news {
+    background-image: url(../img/Icons/newsIcon.png);
+}
+
+.textboxItems {
+    width: calc(100% - (300px + 200px));
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
