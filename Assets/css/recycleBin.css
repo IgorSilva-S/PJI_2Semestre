@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #a4e2f1;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url(../img/GamesImage/RecycleBin/bottomBackground.png);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.binContainer {
+    width: 100vw;
+    height: 200px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.redBin,
+.greenBin,
+.blueBin,
+.yellowBin,
+.brownBin {
+    width: 150px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    transition-duration: .2s;
+}
+
+.redBin:hover,
+.greenBin:hover,
+.blueBin:hover,
+.yellowBin:hover,
+.brownBin:hover {
+    margin-top: -20px;
+}
+
+.redBin {
+    background-image: url(../img/GamesImage/RecycleBin/redBin.png);
+}
+
+.greenBin {
+    background-image: url(../img/GamesImage/RecycleBin/greenBin.png);
+}
+
+.blueBin {
+    background-image: url(../img/GamesImage/RecycleBin/blueBin.png);
+}
+
+.yellowBin {
+    background-image: url(../img/GamesImage/RecycleBin/yellowBin.png);
+}
+
+.brownBin {
+    background-image: url(../img/GamesImage/RecycleBin/brownBin.png);
+}
+
+.itemSelected {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    border: 2px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px 0 0 0;
+        backdrop-filter: blur(5px);
+}
+
+.itemSelected p {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 0;
+}
+
+.itemSelected .viewer {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.points {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: 0;
+    top: 250px;
+    box-sizing: border-box;
+    border: 2px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 0 8px;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    backdrop-filter: blur(5px);
+}
+
+.points span {
+    margin: 0 5px;
+}
+
+.gameContainer {
+    width: calc(100% - 250px);
+    height: 650px;
+    position: relative;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 40PX;
+    top: 40px;
+}
+
+.green {
+    background-image: url(../img/GamesImage/RecycleBin/glassTrash.png);
+}
+
+.blue {
+    background-image: url(../img/GamesImage/RecycleBin/paperTrash.png);
+}
+
+.red {
+    background-image: url(../img/GamesImage/RecycleBin/plasticTrash.png);
+}
+
+.yellow {
+    background-image: url(../img/GamesImage/RecycleBin/metalTrash.png);
+}
+
+.brown {
+    background-image: url(../img/GamesImage/RecycleBin/organicTrash.png);
+}
+
+.clouds {
+    background-image: url(../img/GamesImage/RecycleBin/cloudsBackground.png);
+    background-size: cover;
+    background-position: center;
+    width: 300%;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: clouds;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes clouds {
+0% {
+    left: 0;
+}
+50% {
+    left: -200%;
+}
+100% {
+    left: 0;
+}
+}
