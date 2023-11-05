@@ -20,6 +20,8 @@
     --translucentGroundBrown: #50353077;
     --translucentRosePink: #efaa9c77;
     --translucentSmokedWhite: #ede8ea77;
+    /*Outros*/
+    --acrylicColor: #ede8ea44;
 
     /*Fontes*/
     --normalText: 'Quicksand', sans-serif;
@@ -28,11 +30,6 @@
 
 body {
     background: var(--smokedWhite);
-    background-size: 100%;
-    background-position: bottom;
-    background-image: url(../img/BackgroundTextureBottom.png);
-    background-repeat: no-repeat;
-    padding-bottom: 250px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -91,6 +88,10 @@ header h1 {
     color: var(--texts);
     transition-duration: .2s;
     z-index: 1002;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 50px;
 }
 
 .lbar .exitbar {
@@ -140,73 +141,84 @@ header h1 {
     rotate: 180deg;
 }
 
-
-header select {
-    border-radius: 4px;
-    padding: 2px;
-}
-
-
-.startBoxStyle {
+.welcomeBanner {
     width: 100vw;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.startBoxStyle h1 {
-    font-size: 50px;
-    position: relative;
-    margin: 20px 0;
-}
-
-.startBoxStyle h1::after {
-    content: '';
-    width: 100%;
-    position: absolute;
-    height: 5px;
-    left: 0;
-    bottom: -10px;
-    background-color: black;
-    border-radius: 100px;
-
-}
-
-.startBoxStyle p {
-    font-size: 30px;
-    text-decoration: underline;
-}
-
-.items {
-    width: 98%;
-    height: 300px;
-    border-radius: 8px;
-    margin: 10px 0;
-    transition-duration: .2s;
-    display: flex;
-}
-
-.items:hover{
-    background-color: var(--translucentRosePink);
-}
-
-.imageItems {
-    width: 300px;
-    height: 300px;
+    height: 75vh;
+    background-image: url(../img/Banner.png);
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.news {
-    background-image: url(../img/Icons/newsIcon.png);
+.welcomeBanner .messageBoxWelcome {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    position: absolute;
+    height: 50%;
+    background-color: var(--acrylicColor);
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
 }
 
-.textboxItems {
-    width: calc(100% - (300px + 200px));
-    height: 300px;
+.welcomeBanner .messageBoxWelcome h1 {
+    font-size: 50px;
+}
+
+.welcomeBanner .messageBoxWelcome p {
+    font-size: 35px;
+}
+
+.welcomeBanner .messageBoxWelcome .buttonStyle {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--translucentBlackGreen);
+    color: white;
+    font-size: 30px;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+.welcomeBanner .messageBoxWelcome .buttonStyle:hover {
+    background-color: var(--blackGreen);
+}
+
+#langPop {
+    position: absolute;
+    top: 75px;
+    background-color: var(--whiteGreen);
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 10px;
+    transform: scaleY(0);
+    transition-duration: .3s;
+    transform-origin: top;
+}
+
+#langPop .lang {
+    width: 200px;
+    margin: 2px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 5px;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+#langPop .lang:hover {
+    background-color: var(--translucentBlackGreen);
+}
+
+.langB {
+    cursor: pointer;
 }

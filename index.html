@@ -21,27 +21,24 @@
         <div class="logo"></div>
         <h1>Nome</h1>
         <div class="langChoose">
-            <ion-icon name="earth-outline"></ion-icon>
-            <select name="language" id="language">
-                <option value="PTBR">PT-BR</option>
-                <option value="EN">EN-US</option>
-            </select>
+            <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
+            <div id="langPop">
+                Selecione seu idioma
+                <div class="lang">Português Brasileiro</div>
+                <div class="lang">English(US)</div>
+            </div>
         </div>
     </header>
     <!--Início-->
-        <div class="startBoxStyle">
-            <h1>Bem-vindo(a)</h1>
-            <p>Conheça algumas novidades sobre o meio ambiente
-                e ajude-o no seu dia a dia</p>
-        </div>
-        <div class="items">
-            <div class="imageItems news"></div>
-            <div class="textboxItems">
-                <h2>Notícias</h2>
-                Veja algimas notícias relacionadas ao meio ambiente no geral, 
+    <div class="welcomeBanner">
+        <div class="messageBoxWelcome">
+            <h1>Bem vindo(a) ao (nome do site)!</h1>
+            <p>a natureza precisa ser salva e você pode ajudar</p>
+            <div class="buttonStyle" onclick="openLbar()">
+                navegue e saiba mais
             </div>
-            <div class="goToPage"></div>
         </div>
+    </div>
         
 </body>
 <!--IonIcons-->
