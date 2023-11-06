@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name</title>
     <link rel="stylesheet" href="Assets/css/style.css">
 </head>
+
 <body>
     <div class="lbar">
         <div class="exitbar" onclick="closeLbar()">
@@ -14,7 +16,7 @@
             <img src="Assets/img/Icons/LateralBarIcons/home.png" alt="">
             Início
         </div>
-        <div class="patchs" onclick="location.href = 'fofocas.html'">
+        <div class="patchs" onclick="closeLbar()">
             <img src="Assets/img/Icons/LateralBarIcons/news.png" alt="">
             Notícias
         </div>
@@ -51,9 +53,35 @@
             </div>
         </div>
     </header>
+    <h1>Nesta semana:</h1>
+    <div class="carousel">
+        <div class="newsTrail">
+            <div class="newsInfo img1">
+                <div class="title">Projeto cultural em Ibirapuera</div>
+            </div>
+            <div class="newsInfo img2">
+                <div class="title">Contaminação da água, saiba os riscos</div>
+            </div>
+            <div class="newsInfo img3">
+                <div class="title">Secas na Amazônia, entenda</div>
+            </div>
+            <div class="newsInfo img1">
+                <div class="title">Projeto cultural em Ibirapuera</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="monthNews">
+        <h1>Neste mês:</h1>
+        <div class="bestMonth">
+            <img src="Assets/img/noticias/images (2).jfif" alt="">
+        </div>
+    </div>
 </body>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="Assets/js/script.js"></script>
+<script src="Assets/js/universalFunctions.js"></script>
+<script src="Assets/js/newsFunctions.js"></script>
+
 </html>

@@ -288,3 +288,80 @@ header h1 {
 .lbar .patchs:hover {
     background-color: var(--translucentGroundBrown);
 }
+
+.carousel {
+    width: 100vw;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.newsTrail {
+    position: absolute;
+    width: 400%;
+    height: 600px;
+    transition-duration: .7s;
+    display: flex;
+    left: 0;
+}
+
+.newsTrail .newsInfo {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.newsTrail .img1 {
+    background-image: url(../img/noticias/images\ \(3\).jfif);
+}
+
+.newsTrail .img2 {
+    background-image: url(../img/noticias/images\(9\).webp);
+}
+
+.newsTrail .img3 {
+    background-image: url(../img/noticias/images\(10\).jpg);
+
+}
+
+.newsTrail .newsInfo .title {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    box-sizing: border-box;
+    font-size: 30px;
+    backdrop-filter: blur(20px);
+    background-color: var(--acrylicColor);
+    display: flex;
+    align-items: center;
+}
+
+.monthNews {
+    width: 90vw;
+    margin-left: 5%;
+    text-align: left;
+    position: relative;
+}
+
+.bestMonth {
+    margin: 20px 0;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.bestMonth img {
+    width: 320px;
+    height: 199px;
+    box-sizing: border-box;
+    border: 2px solid var(--whiteGreen);
+    border-radius: 8px;
+}
