@@ -92,6 +92,7 @@ header h1 {
     justify-content: space-evenly;
     align-items: center;
     font-size: 50px;
+    flex-direction: column;
 }
 
 .lbar .exitbar {
@@ -150,6 +151,8 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0 0 16px 16px;
+    margin-bottom: 30px;
 }
 
 .welcomeBanner .messageBoxWelcome {
@@ -221,4 +224,67 @@ header h1 {
 
 .langB {
     cursor: pointer;
+}
+
+.sectionsBox {
+    width: 98%;
+    margin-left: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sectionsBox .box {
+    width: 250px;
+    height: 350px;
+    border-radius: 4px;
+    background-color: var(--translucentRosePink);
+    margin: 10px;
+    transition-duration: .2s;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sectionsBox .box:hover {
+    margin-top: -10px;
+    background-color: var(--rosePink);
+    border-radius: 8px;
+}
+
+.sectionsBox .box img {
+    width: 200px;
+    height: 200px;
+}
+
+.sectionsBox .box p {
+    text-align: center;
+}
+
+.lbar .patchs {
+    width: 75%;
+    height: 80px;
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+    padding: 5px;
+    border-radius: 8px;
+    transition-duration: .3s;
+}
+
+.lbar .patchs img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+}
+
+.lbar .patchs:hover {
+    background-color: var(--translucentGroundBrown);
 }

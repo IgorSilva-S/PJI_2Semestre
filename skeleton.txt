@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name</title>
     <link rel="stylesheet" href="Assets/css/style.css">
 </head>
-
 <body>
     <div class="lbar">
         <div class="exitbar" onclick="closeLbar()">
@@ -53,48 +51,9 @@
             </div>
         </div>
     </header>
-    <!--Início-->
-    <div class="welcomeBanner">
-        <div class="messageBoxWelcome">
-            <h1>Bem vindo(a) ao (nome do site)!</h1>
-            <p>a natureza precisa ser salva e você pode ajudar</p>
-            <div class="buttonStyle" onclick="openLbar()">
-                Navegue e saiba mais
-            </div>
-        </div>
-    </div>
-    <div class="sectionsBox">
-        <div class="box" onclick="location.href = 'fofocas.html'">
-            <img src="Assets/img/Icons/newsIcon.png" alt="">
-            <h2>Notícias</h2>
-            <p>Tenha acesso as mais recentes notícias sobre o meio ambiente</p>
-        </div>
-        <div class="box">
-            <img src="Assets/img/Icons/cvmIcon.png" alt="">
-            <h2>Cuide você mesmo</h2>
-            <p>Crie coisas novas com o que seria descartado e aprenda a cuidar do nosso planeta</p>
-        </div>
-        <div class="box">
-            <img src="Assets/img/Icons/donateIcon.png" alt="">
-            <h2>Doações</h2>
-            <p>Faça uma doação para o cuidado do meio ambiente</p>
-        </div>
-        <div class="box">
-            <img src="Assets/img/Icons/contactIcon.png" alt="">
-            <h2>Contatos</h2>
-            <p>Converse conosco por meio de nossas redes sociais</p>
-        </div>
-        <div class="box">
-            <img src="Assets/img/Icons/teamIcon.png" alt="">
-            <h2>Sobre o time</h2>
-            <p>Conheça um pouco sobre os desenvolvedores deste site</p>
-        </div>
-    </div>
-        
 </body>
-<!--IonIcons-->
+
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="Assets/js/script.js"></script>
-
 </html>
