@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name</title>
+    <title>Futuro em Ação</title>
     <link rel="stylesheet" href="Assets/css/style.css">
 </head>
 
@@ -20,7 +20,7 @@
             <img src="Assets/img/Icons/LateralBarIcons/news.png" alt="">
             Notícias
         </div>
-        <div class="patchs">
+        <div class="patchs" onclick="location.href = 'cuideVcMsm.html'">
             <img src="Assets/img/Icons/LateralBarIcons/DIY.png" alt="">
             Cuide você mesmo
         </div>
@@ -43,7 +43,7 @@
     </div>
     <header>
         <div class="logo"></div>
-        <h1>Nome</h1>
+        <h1>Futuro em Ação</h1>
         <div class="langChoose">
             <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
             <div id="langPop">
@@ -69,7 +69,7 @@
             <h2>Notícias</h2>
             <p>Tenha acesso as mais recentes notícias sobre o meio ambiente</p>
         </div>
-        <div class="box">
+        <div class="box" onclick="location.href = 'cuideVcMsm.html'">
             <img src="Assets/img/Icons/cvmIcon.png" alt="">
             <h2>Cuide você mesmo</h2>
             <p>Crie coisas novas com o que seria descartado e aprenda a cuidar do nosso planeta</p>
@@ -90,11 +90,106 @@
             <p>Conheça um pouco sobre os desenvolvedores deste site</p>
         </div>
     </div>
+    <div class="quickAccess">
+        <h1>Acesso rápido</h1>
+        <div class="quickBox" onclick="location.href = 'fofocas.html'">
+            <h2>Notícias</h2>
+            <div class="carouselHome">
+                <div class="newsTrail">
+                    <div class="newsInfo img1"></div>
+                    <div class="newsInfo img2"></div>
+                    <div class="newsInfo img3"></div>
+                    <div class="newsInfo img1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="quickBox">
+            <h2>Cuide Você Mesmo</h2>
+            <div class="goToBox" onclick="location.href = 'recycleBin.html'">
+                <p>Jogos para crianças</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Ideias de reciclagens</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Descarte consciente</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Saiba onde descartar</p>
+                <p>&#187;</p>
+            </div>
+        </div>
+        <div class="quickBox">
+            
+            <h2>Doações</h2>
+            Faça uma doação para ajudar o meio ambiente e o nosso planeta!
+            <div class="goToBox">
+                <p>Doe agora!</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Saiba mais sobre as doações</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Dúvidas frequentes</p>
+                <p>&#187;</p>
+            </div>
+        </div>
+        <div class="quickBox">
+            <h2>Contatos</h2>
+            <div class="goToBox">
+                <p>WhatsApp</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Instagram</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Número de telefone (ligações)</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox" onclick="location.href = 'mailto:igor.silva1@aluno.ifsp.edu.br'">
+                <p>E-mail</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>X (Twitter)</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Threads</p>
+                <p>&#187;</p>
+            </div>
+
+        </div>
+        <div class="quickBoxF">
+            <h2>Sobre o time</h2>
+            <div class="goToBox">
+                <p>Objetivos</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Missão</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Sobre os integrantes do time</p>
+                <p>&#187;</p>
+            </div>
+        </div>
+
+    </div>
         
 </body>
 <!--IonIcons-->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="Assets/js/universalFunctions.js"></script>
+<script type="module" src="Assets/js/newsFunctions.js"></script>
 
 </html>
