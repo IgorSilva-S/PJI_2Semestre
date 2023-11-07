@@ -405,6 +405,23 @@ header h1 {
     margin: 10px 0;
 }
 
+.quickBox .newsTitle {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.quickBox .newsTitle #newsText {
+    font-size: 30px;
+}
+
+.quickBox .newsTitle p {
+    margin: 0 10px;
+}
+
 /*Notícias*/
 
 .carousel {
