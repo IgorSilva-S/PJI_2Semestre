@@ -26,6 +26,9 @@
     /*Fontes*/
     --normalText: 'Quicksand', sans-serif;
     --headerText: 'Great Vibes', cursive;
+
+    /*Sombreamento*/
+    --shadow: 1px 1px 10px 1px #191919;
 }
 
 /*Geral*/
@@ -35,6 +38,20 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition-duration: .3s;
+    animation-name: appearBody;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+
+@keyframes appearBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 html {
@@ -84,7 +101,7 @@ header h1 {
     position: fixed;
     left: -25%;
     top: 0;
-    background-color: #0f5f5366;
+    background-color: var(--translucentBlackGreen);
     backdrop-filter: blur(20px);
     z-index: 1000;
     color: var(--texts);
@@ -112,6 +129,36 @@ header h1 {
     transition-delay: .2s;
     transition-duration: .5s;
 }
+
+.lbar .patchs {
+    width: 75%;
+    height: 80px;
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+    padding: 5px;
+    border-radius: 8px;
+    transition-duration: .3s;
+}
+
+.lbar .patchs img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+}
+
+.lbar .patchs:hover {
+    background-color: var(--translucentGroundBrown);
+}
+
+.lbar .patchs:active {
+    background-color: var(--groundBrown);
+}
+
 
 .barButton {
     width: 60px;
@@ -268,31 +315,6 @@ header h1 {
     text-align: center;
 }
 
-.lbar .patchs {
-    width: 75%;
-    height: 80px;
-    font-size: 25px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 10px 0;
-    position: relative;
-    padding: 5px;
-    border-radius: 8px;
-    transition-duration: .3s;
-}
-
-.lbar .patchs img {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    left: 0;
-}
-
-.lbar .patchs:hover {
-    background-color: var(--translucentGroundBrown);
-}
-
 
 .quickAccess {
     width: 90%;
@@ -342,7 +364,7 @@ header h1 {
 
 .quickAccess .quickBox:hover,
 .quickAccess .quickBoxF:hover {
-    box-shadow: 1px 1px 10px 1px #191919;
+    box-shadow: var(--shadow)
 }
 
 .quickAccess .quickBox a,
@@ -391,6 +413,11 @@ header h1 {
 .quickBox .goToBox:hover,
 .quickBoxF .goToBox:hover {
     background-color: var(--translucentWhiteGreen);
+}
+
+.quickBox .goToBox:active,
+.quickBoxF .goToBox:active {
+    background-color: var(--whiteGreen);
 }
 
 .carouselHome {
@@ -612,7 +639,7 @@ header h1 {
     background-image: url(../img/DIY/img\(1\).jpg);
 }
 
-.gamesCont {
+.CVMCont {
     width: 96%;
     margin: 10px auto;
     padding: 10px;
@@ -622,12 +649,34 @@ header h1 {
     text-align: center;
 }
 
-.gamesCont h1 {
+.CVMContFLX {
+    width: 96%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    position: relative;
+}
+
+.CVMContFLX h2 {
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+
+.CVMCont h1 {
     font-size: xx-large;
 }
 
-.gamesCont .box {
-    width: 48%;
+.CVMCont .box {
+    width: 97%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -636,26 +685,50 @@ header h1 {
     flex-direction: column;
     margin: 10px 1%;
     padding: 10px;
-    float: left;
     transition-duration: .3s;
 }
 
-.gamesCont .box:hover {
-    box-shadow: 1px 1px 10px 1px #191919;
+.CVMCont .box:hover {
+    box-shadow: var(--shadow)
 }
 
-.gamesCont .box .name {
+.CVMCont .box .name {
     width: 100%;
+    padding-top: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
-.gamesCont .box img {
+.CVMCont .box .name h2 {
+    position: absolute;
+    top: 0;
+}
+
+.CVMCont .box img {
     width: 300px;
     height: 142px;
     border-radius: 4px;
     border: 2px solid var(--whiteGreen);
     margin: 20px 0;
+}
+
+.CVMContFLX .contentCVM {
+    width: 47%;
+    margin: 10px 0.1%;
+}
+
+.CVMContFLX .videos {
+    width: 25%;
+    margin: 10px;
+    height: 250px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    transition-duration: .3s;
+}
+
+.CVMContFLX .videos:hover {
+    box-shadow: var(--shadow);
 }

@@ -10,27 +10,39 @@
     <div class="lbar">
         <div class="exitbar" onclick="closeLbar()">
         </div>
-        <div class="patchs" onclick="location.href = 'index.html'">
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'index.html'
+        }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/home.png" alt="">
             Início
         </div>
-        <div class="patchs" onclick="location.href = 'fofocas.html'">
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'fofocas.html'
+        }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/news.png" alt="">
             Notícias
         </div>
-        <div class="patchs" onclick="location.href = 'cuideVcMsm.html'">
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'cuideVcMsm.html'
+        }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/DIY.png" alt="">
             Cuide você mesmo
         </div>
-        <div class="patchs">
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'doacoes.html'
+        }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/donation.png" alt="">
             Doações
         </div>
-        <div class="patchs">
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'contatos.html'
+        }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/contact.png" alt="">
             Contato
         </div>
-        <div class="patchs">
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'aboutUs.html'
+        }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/aboutUs.png" alt="">
             Sobre nós
         </div>
