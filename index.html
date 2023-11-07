@@ -12,9 +12,7 @@
     <div class="lbar">
         <div class="exitbar" onclick="closeLbar()">
         </div>
-        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'index.html'
-        }, 300);">
+        <div class="patchs" onclick="closeLbar()">
             <img src="Assets/img/Icons/LateralBarIcons/home.png" alt="">
             Início
         </div>
@@ -76,33 +74,43 @@
         </div>
     </div>
     <div class="sectionsBox">
-        <div class="box" onclick="location.href = 'fofocas.html'">
+        <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'fofocas.html'
+        }, 300);">
             <img src="Assets/img/Icons/newsIcon.png" alt="">
             <h2>Notícias</h2>
             <p>Tenha acesso as mais recentes notícias sobre o meio ambiente</p>
         </div>
-        <div class="box" onclick="location.href = 'cuideVcMsm.html'">
+        <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'cuideVcMsm.html'
+        }, 300);">
             <img src="Assets/img/Icons/cvmIcon.png" alt="">
             <h2>Cuide você mesmo</h2>
             <p>Crie coisas novas com o que seria descartado e aprenda a cuidar do nosso planeta</p>
         </div>
-        <div class="box">
+        <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'doacoes.html'
+        }, 300);">
             <img src="Assets/img/Icons/donateIcon.png" alt="">
             <h2>Doações</h2>
             <p>Faça uma doação para o cuidado do meio ambiente</p>
         </div>
-        <div class="box">
+        <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'contatos.html'
+        }, 300);">
             <img src="Assets/img/Icons/contactIcon.png" alt="">
             <h2>Contatos</h2>
             <p>Converse conosco por meio de nossas redes sociais</p>
         </div>
-        <div class="box">
+        <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'aboutUs.html'
+        }, 300);">
             <img src="Assets/img/Icons/teamIcon.png" alt="">
             <h2>Sobre o time</h2>
             <p>Conheça um pouco sobre os desenvolvedores deste site</p>
         </div>
     </div>
-    <div class="quickAccess">
+    <div class="quickAccess" style="display: none;">
         <h1>Acesso rápido</h1>
         <div class="quickBox" onclick="location.href = 'fofocas.html'">
             <h2>Notícias</h2>

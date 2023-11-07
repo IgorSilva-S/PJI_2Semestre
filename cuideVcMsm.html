@@ -24,9 +24,7 @@
             <img src="Assets/img/Icons/LateralBarIcons/news.png" alt="">
             Notícias
         </div>
-        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'cuideVcMsm.html'
-        }, 300);">
+        <div class="patchs" onclick="closeLbar()">
             <img src="Assets/img/Icons/LateralBarIcons/DIY.png" alt="">
             Cuide você mesmo
         </div>
@@ -69,7 +67,8 @@
     <div class="CVMCont">
         <h1>Jogos</h1>
         Aprenda reciclagem e a cuidar do planeta com jogos educativos!<br>
-        <div class="box" onclick="location.href = 'recycleBin.html'">
+        <div class="box" id="g1" onclick="openg1()">
+            <div class="openViewer"></div>
             <div class="name">
                 <h2>Lixeiras</h2>
                 <p>Aprenda a jogar o lixo nas lixeiras corretas com esse joguinho</p>
@@ -126,5 +125,6 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="Assets/js/universalFunctions.js"></script>
+<script src="Assets/js/CVMFunctions.js"></script>
 
 </html>
