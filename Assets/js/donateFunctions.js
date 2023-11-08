@@ -1,3 +1,5 @@
 function linkdoacao() {
-    window.location = 'doacoes2.html'
+    document.body.style.opacity = '0'; setTimeout(() => {
+        location.href = 'doacoes2.html'
+    }, 300);
 }
