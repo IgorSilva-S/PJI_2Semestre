@@ -44,6 +44,7 @@ body {
     animation-duration: .3s;
     animation-timing-function: linear;
     opacity: 1;
+
 }
 
 @keyframes appearBody {
@@ -937,4 +938,138 @@ header h1 {
     left: 120%;
     top: 25%;
     transition-duration: .3s;
+}
+
+
+
+/*Sobre nós*/
+
+section {
+    width: 75vw;
+    height: calc(100vh - 100px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 50px;
+    font-size: 20px;
+    overflow: auto;
+}
+
+section h1 {
+    font-size: 50px;
+    color: var(--whiteGreen);
+    margin-bottom: 20px;
+}
+
+.navAbUs {
+    width: 25%;
+    height: calc(100vh - 100px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 25px;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.navAbUs h2 {
+    font-size: 30px;
+    transition-duration: .3s;
+    position: relative;
+    margin: 30px 0;
+}
+
+.navAbUs h2::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: black;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: transform .3s;
+    transform-origin: right;
+}
+
+.navAbUs h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navAbUs .h2Active {
+    position: relative;
+    color: var(--whiteGreen);
+}
+
+.navAbUs .h2Active::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: var(--whiteGreen);
+    border-radius: 20px;
+    transform: scaleX(1);
+}
+
+.navAbUs::before {
+    width: 5px;
+    height: 60%;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    content: '';
+    background-color: #191919;
+    border-radius: 8px;
+}
+
+.intNames {
+    margin: 10px 0;
+    position: relative;
+}
+
+.intNames::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: black;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: transform .3s;
+    transform-origin: right;
+}
+
+.intNames:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.intNamesActive {
+    color: var(--whiteGreen);
+    margin: 10px 0;
+    position: relative;
+}
+
+.intNamesActive::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: var(--whiteGreen);
+    border-radius: 20px;
+    transform: scaleX(1);
+    transition: transform .3s;
+    transform-origin: right;
 }
