@@ -10,19 +10,19 @@
     <div class="lbar">
         <div class="exitbar" onclick="closeLbar()">
         </div>
-        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+        <div class="patchs" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
             location.href = 'index.html'
         }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/home.png" alt="">
             Início
         </div>
-        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+        <div class="patchs" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
             location.href = 'fofocas.html'
         }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/news.png" alt="">
             Notícias
         </div>
-        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+        <div class="patchs" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
             location.href = 'cuideVcMsm.html'
         }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/DIY.png" alt="">
@@ -32,13 +32,13 @@
             <img src="Assets/img/Icons/LateralBarIcons/donation.png" alt="">
             Doações
         </div>
-        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+        <div class="patchs" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
             location.href = 'contatos.html'
         }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/contact.png" alt="">
             Contato
         </div>
-        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+        <div class="patchs" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
             location.href = 'aboutUs.html'
         }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/aboutUs.png" alt="">
@@ -62,10 +62,23 @@
         </div>
     </header>
     <p class="texttitu2">Envie o seu formulário para doação</p>
-    div.
+    <form action="" class="formsDonate">
+        <div class="flexContent">
+            <input type="text" name="Nome" id="name" class="inpName" placeholder="Nome Completo" required>
+            <input type="email" name="Email" id="mail" class="inpMail" placeholder="Email" required>
+            <input type="text" name="Tel" id="telephone" class="inpTel" placeholder="Número de telefone" required>
+            <input type="text" name="Endereco" id="address" class="inpLocal" placeholder="Endereço" required>
+        </div>
+        <div class="flexContent" style="justify-content: space-evenly;">
+            <input type="number" name="" id="value" class="inpDonate" placeholder="Valor">
+            <button class="donateButton" onclick="donate()">Doar</button>
+        </div>
+        
+    </form>
 </body>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="Assets/js/universalFunctions.js"></script>
+<script src="Assets/js/donateFunctions.js"></script>
 </html>

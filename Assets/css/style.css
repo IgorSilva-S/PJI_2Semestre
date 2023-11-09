@@ -840,3 +840,101 @@ header h1 {
     margin-top: 10px;
 }
 
+.formsDonate {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.formsDonate .flexContent {
+    width: 50vw;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formsDonate input {
+    width: 50%;
+    height: 50px;
+    border-radius: 120px;
+    background-repeat: no-repeat;
+    background-size: 8%;
+    background-position: 2%;
+    font-size: 20px;
+    margin: 15px 0;
+    padding-left: 7%;
+    border: 2px solid #ccc;
+    transition-duration: .3s;
+}
+
+.formsDonate input:focus {
+    outline: none;
+    border: 2px solid var(--blackGreen);
+}
+
+.inpName {
+    background-image: url(../img/doacoes/nome.png);
+}
+
+.inpMail {
+    background-image: url(../img/doacoes/email\ \(2\).png);
+}
+
+.inpTel {
+    background-image: url(../img/doacoes/Design\ sem\ nome\ \(2\).png);
+}
+
+.inpLocal {
+    background-image: url(../img/doacoes/local.png);
+}
+
+.inpDonate {
+    background-image: url(../img/doacoes/pagamento.png);
+}
+
+.donateButton {
+    padding: 20px 40px;
+    font-size: 30px;
+    font-family: var(--headerText);
+    border-radius: 10px;
+    border: none;
+    background-color: var(--blackGreen);
+    color: white;
+    font-weight: bold;
+    transition-duration: .3s;
+}
+
+.donateButton:hover {
+    background-color: var(--whiteGreen);
+}
+
+.exitDonations {
+    width: 50px;
+    height: 50px;
+    filter: invert();
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/Arrow.png);
+    position: absolute;
+    top: 110px;
+    left: 5%;
+}
+
+.exitDonations::after {
+    content: 'Voltar';
+    color: #ccc;
+    font-size: 20px;
+    position: absolute;
+    left: 120%;
+    top: 25%;
+    transition-duration: .3s;
+}
