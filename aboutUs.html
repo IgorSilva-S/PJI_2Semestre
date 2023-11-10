@@ -64,21 +64,84 @@
             </div>
         </div>
     </header>
-    <section id="goals">
+    <section id="goals" class="sectionActive">
+        <div class="stylePerson"></div>
         <h1>Objetivos</h1>
+        Nosso site tem como objetivo conscientizar as pessoas sobre a importância de cuidar do meio ambiente, divulgar
+        doações
+        em ONGs e informar os usuários de forma completa com notícias e tutoriais.
+        Vamos ensinar os usuários , adultos e crianças, de forma divertida a viver de forma sustentável e como fazer a
+        diferença
+        em nossa luta pelo mundo.
+        <div class="sectionImages">
+            <img src="Assets/img/objetivos/download.jfif" alt="">
+            <img src="Assets/img/objetivos/images (1).jfif" alt="">
+            <img src="Assets/img/objetivos/images.jfif" alt="">
+        </div>
     </section>
-    <section id="team"></section>
-    <section id="igor"></section>
-    <section id="nicholas"></section>
-    <section id="jussara"></section>
-    <section id="missions"></section>
+    <section id="team">
+        <div class="stylePerson"></div>
+        <h1>Integrantes do time</h1>
+        Conheça sobre os integrantes do nosso time:<br><br>
+        <p onclick="openIgor()">Igor Silva Santos</p>
+        Programador e Designer<br><br>
+        <p onclick="openNicholas()">Nicholas Souza Camargo</p>
+        Desenvolvedor<br><br>
+        <p onclick="openJussara()">Jussara Martins de Sousa</p>
+        Designer<br>
+        <div class="sectionImages">
+            <img src="Assets/img/TeamImage/user.png" alt="">
+            <img src="Assets/img/TeamImage/user.png" alt="">
+            <img src="Assets/img/TeamImage/user.png" alt="">
+        </div>
+    </section>
+    <section id="igor">
+        <div class="stylePerson"></div>
+        <h1>Igor Silva Santos</h1>
+        Programador e designer do Futuro em Ação, é aluno do IFSP e cursa tecnologia da informação e comunicação. Seu
+        maior objetivo é tornar a internet um local mais agradável de se navegar, contribuindo com sites que todos
+        conseguem ter acesso e utilizar com facilidade.
+        <div class="personImage"></div>
+    </section>
+    <section id="nicholas">
+        <div class="stylePerson"></div>
+        <h1>Nicholas Souza Camargo</h1>
+        Desenvolvedor web do Futuro em Ação, é aluno do IFSP e cursa tecnologia da informação e comunicação. seu
+        objetivo é
+        criar um site que conscientize os usuários e seja atrativo.
+        <div class="personImage"></div>
+    </section>
+    <section id="jussara">
+        <div class="stylePerson"></div>
+        <h1>Jussara Martins de Sousa</h1>
+        Designer e administradora do Futuro em Ação, é aluna do IFSP cursando tecnologia da informação, seu objetivo
+        profissional é ser capaz de analisar o que o cliente precisa e proporcionar os melhores resultados para a
+        indústria web.
+        <div class="personImage"></div>
+    </section>
+    <section id="missions">
+        <div class="stylePerson"></div>
+        <h1>Missões</h1>
+        Nossa missão como associação pró-meio ambiente é promover a saúde da flora paulista, apoiar movimentos
+        ambientais e
+        manter a população informada com artigos e notícias das conquistas e desastres na capital na capital .
+        <br><br>
+        Acreditamos que com a educação e informação todos podemos aprender a cuidar do ecossistema no cotidiano e
+        resgatar o
+        planeta.
+        <div class="sectionImages">
+            <img src="Assets/img/missoes/2f66f8656ee1c17d41c8b23afcb1d380.jpg" alt="">
+            <img src="Assets/img/missoes/5d8410f1b6891cf4c6aedb7652ed184f.jpg" alt="">
+            <img src="Assets/img/missoes/b3f2b6ff3414eec1a3d3aa6d0268f31c.jpg" alt="">
+        </div>
+    </section>
     <nav class="navAbUs">
-        <h2 class="h2Active">Objetivos</h2>
-        <h2>Integrantes</h2>
-        <p class="intNames">Igor Silva Santos</p>
-        <p class="intNames">Nicholas Souza Camargo</p>
-        <p class="intNames">Jussara Martins de Sousa</p>
-        <h2>Missões</h2>
+        <h2 class="h2Active" id="goalsName" onclick="openGoals()">Objetivos</h2>
+        <h2 id="teamName" onclick="openTeam()">Integrantes</h2>
+        <p class="intNames" id="igorName" onclick="openIgor()">Igor Silva Santos</p>
+        <p class="intNames" id="nicholasName" onclick="openNicholas()">Nicholas Souza Camargo</p>
+        <p class="intNames" id="jussaraName" onclick="openJussara()">Jussara Martins de Sousa</p>
+        <h2 id="missionsName" onclick="openMissions()">Missões</h2>
     </nav>
 </body>
 
