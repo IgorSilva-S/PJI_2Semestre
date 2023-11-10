@@ -13,7 +13,7 @@
     <div class="lbar">
         <div class="exitbar" onclick="closeLbar()">
         </div>
-        <div class="patchs" onclick="closeLbar()">
+        <div class="patchs lbarpage" onclick="closeLbar()">
             <img src="Assets/img/Icons/LateralBarIcons/home.png" alt="">
             Início
         </div>
@@ -111,121 +111,12 @@
             <p>Conheça um pouco sobre os desenvolvedores deste site</p>
         </div>
     </div>
-    <div class="quickAccess">
-        <h1>Acesso rápido</h1>
-        <div class="quickBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'cuideVcMsm.html'
-        }, 300);">
-            <h2>Notícias</h2>
-            <div class="carouselHome">
-                <div class="newsTrail">
-                    <div class="newsInfo img1"></div>
-                    <div class="newsInfo img2"></div>
-                    <div class="newsInfo img3"></div>
-                    <div class="newsInfo img1"></div>
-                </div>
-            </div>
-            <div class="newsTitle">
-                <p id="newsText">Projeto cultural em Ibirapuera</p>
-                <p>Veja mais &#187;</p>
-            </div>
-        </div>
-        <div class="quickBox">
-            <h2>Cuide Você Mesmo</h2>
-            <div class="goToBox">
-                <p>Jogos para crianças</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-                location.href = 'cuideVcMsm.html#recycle'
-            }, 300);">
-                <p>Ideias de reciclagens</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-                location.href = 'cuideVcMsm.html#video'
-            }, 300);">
-                <p>Videos</p>
-                <p>&#187;</p>
-            </div>
-        </div>
-        <div class="quickBox">
-            
-            <h2>Doações</h2>
-            Faça uma doação para ajudar o meio ambiente e o nosso planeta!
-            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-                location.href = 'doacoes2.html'
-            }, 300);">
-                <p>Faça sua doação</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-                location.href = 'doacoes.html'
-            }, 300);">
-                <p>Saiba mais sobre as doações</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox">
-                <p>Dúvidas frequentes</p>
-                <p>&#187;</p>
-            </div>
-        </div>
-        <div class="quickBox">
-            <h2>Contatos</h2>
-            <div class="goToBox">
-                <p>WhatsApp</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox">
-                <p>Instagram</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox">
-                <p>Número de telefone (ligações)</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox" onclick="location.href = 'mailto:igor.silva1@aluno.ifsp.edu.br'">
-                <p>E-mail</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox">
-                <p>Snapchat</p>
-                <p>&#187;</p>
-            </div>
-
-        </div>
-        <div class="quickBoxF">
-            <h2>Sobre o time</h2>
-            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-                location.href = 'aboutUs.html'
-                sessionStorage.setItem('functionToShow', 0)
-            }, 300);">
-                <p>Objetivos</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-                location.href = 'aboutUs.html'
-                sessionStorage.setItem('functionToShow', 2)
-            }, 300);">
-                <p>Missão</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-                location.href = 'aboutUs.html'
-                sessionStorage.setItem('functionToShow', 1)
-            }, 300);">
-                <p>Sobre os integrantes do time</p>
-                <p>&#187;</p>
-            </div>
-        </div>
-
-    </div>
+   
         
 </body>
 <!--IonIcons-->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="Assets/js/universalFunctions.js"></script>
-<script type="module" src="Assets/js/homeFunctions.js"></script>
 
 </html>

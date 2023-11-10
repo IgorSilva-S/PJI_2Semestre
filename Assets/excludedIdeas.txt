@@ -1,0 +1,274 @@
+Acesso rápido - index.html
+
+html:
+ <div class="quickAccess">
+        <h1>Acesso rápido</h1>
+        <div class="quickBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'cuideVcMsm.html'
+        }, 300);">
+            <h2>Notícias</h2>
+            <div class="carouselHome">
+                <div class="newsTrail">
+                    <div class="newsInfo img1"></div>
+                    <div class="newsInfo img2"></div>
+                    <div class="newsInfo img3"></div>
+                    <div class="newsInfo img1"></div>
+                </div>
+            </div>
+            <div class="newsTitle">
+                <p id="newsText">Projeto cultural em Ibirapuera</p>
+                <p>Veja mais &#187;</p>
+            </div>
+        </div>
+        <div class="quickBox">
+            <h2>Cuide Você Mesmo</h2>
+            <div class="goToBox">
+                <p>Jogos para crianças</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'cuideVcMsm.html#recycle'
+            }, 300);">
+                <p>Ideias de reciclagens</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'cuideVcMsm.html#video'
+            }, 300);">
+                <p>Videos</p>
+                <p>&#187;</p>
+            </div>
+        </div>
+        <div class="quickBox">
+            
+            <h2>Doações</h2>
+            Faça uma doação para ajudar o meio ambiente e o nosso planeta!
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'doacoes2.html'
+            }, 300);">
+                <p>Faça sua doação</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'doacoes.html'
+            }, 300);">
+                <p>Saiba mais sobre as doações</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Dúvidas frequentes</p>
+                <p>&#187;</p>
+            </div>
+        </div>
+        <div class="quickBox">
+            <h2>Contatos</h2>
+            <div class="goToBox">
+                <p>WhatsApp</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Instagram</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Número de telefone (ligações)</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox" onclick="location.href = 'mailto:igor.silva1@aluno.ifsp.edu.br'">
+                <p>E-mail</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox">
+                <p>Snapchat</p>
+                <p>&#187;</p>
+            </div>
+
+        </div>
+        <div class="quickBoxF">
+            <h2>Sobre o time</h2>
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'aboutUs.html'
+                sessionStorage.setItem('functionToShow', 0)
+            }, 300);">
+                <p>Objetivos</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'aboutUs.html'
+                sessionStorage.setItem('functionToShow', 2)
+            }, 300);">
+                <p>Missão</p>
+                <p>&#187;</p>
+            </div>
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'aboutUs.html'
+                sessionStorage.setItem('functionToShow', 1)
+            }, 300);">
+                <p>Sobre os integrantes do time</p>
+                <p>&#187;</p>
+            </div>
+        </div>
+
+    </div>
+
+    css:
+
+    .quickAccess {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quickAccess h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.quickAccess .quickBox {
+    width: 48%;
+    margin: 1%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition-duration: .3s;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    font-size: 25px;
+    text-align: center;
+}
+
+.quickAccess .quickBoxF {
+    width: 98%;
+    margin: 1%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition-duration: .3s;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    font-size: 25px;
+    text-align: center;
+}
+
+.quickAccess .quickBox:hover,
+.quickAccess .quickBoxF:hover {
+    box-shadow: var(--shadow)
+}
+
+.quickAccess .quickBox a,
+.quickAccess .quickBoxF a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.quickAccess .quickBox a .goToBox,
+.quickAccess .quickBoxF a .goToBox {
+    margin: 10px 0;
+    width: 90%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+    transition-duration: .3s;
+    border: 1px solid #ccc;
+    height: 50px;
+    border-radius: 4px;
+    transition-duration: .3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+.quickBox .goToBox,
+.quickBoxF .goToBox {
+    margin: 10px 0;
+    width: 90%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+    transition-duration: .3s;
+    border: 1px solid #ccc;
+    height: 50px;
+    border-radius: 4px;
+    transition-duration: .3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+
+.quickBox .goToBox:hover,
+.quickBoxF .goToBox:hover {
+    background-color: var(--translucentWhiteGreen);
+}
+
+.quickBox .goToBox:active,
+.quickBoxF .goToBox:active {
+    background-color: var(--whiteGreen);
+}
+
+.carouselHome {
+    width: 90%;
+    border-radius: 4px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quickBox .newsTitle {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.quickBox .newsTitle #newsText {
+    font-size: 30px;
+}
+
+.quickBox .newsTitle p {
+    margin: 0 10px;
+}
+
+js:
+
+const carousel = document.querySelector('.newsTrail')
+const homeTitle = document.getElementById('newsText')
+let carouselNum = 2
+
+setInterval(() => {
+ if (carouselNum == 2) {
+    carousel.removeAttribute('style')
+        carousel.style.left = '-100%'
+        carouselNum = 3
+        homeTitle.innerText = 'Contaminação da água, saiba os riscos'
+    } else if (carouselNum == 3) {
+        carousel.style.left = '-200%'
+        carouselNum = 4
+        homeTitle.innerText = 'Secas na Amazônia, entenda'
+    } else if (carouselNum == 4) {
+        carousel.style.left = '-300%'
+        homeTitle.innerText = 'Projeto cultural em Ibirapuera'
+        setTimeout(() => {
+            carousel.style.transitionDuration = '0s'
+            carousel.style.left = '0'
+        }, 700);
+        carouselNum = 2
+    }
+}, 5000);
