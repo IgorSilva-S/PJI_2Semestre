@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Futuro em Ação</title>
     <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="shortcut icon" href="Assets/img/Logo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -73,7 +74,7 @@
             </div>
         </div>
     </div>
-    <div class="sectionsBox" style="display: none;">
+    <div class="sectionsBox">
         <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
             location.href = 'fofocas.html'
         }, 300);">
@@ -110,9 +111,11 @@
             <p>Conheça um pouco sobre os desenvolvedores deste site</p>
         </div>
     </div>
-    <div class="quickAccess" >
+    <div class="quickAccess">
         <h1>Acesso rápido</h1>
-        <div class="quickBox" onclick="location.href = 'fofocas.html'">
+        <div class="quickBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'cuideVcMsm.html'
+        }, 300);">
             <h2>Notícias</h2>
             <div class="carouselHome">
                 <div class="newsTrail">
@@ -129,20 +132,20 @@
         </div>
         <div class="quickBox">
             <h2>Cuide Você Mesmo</h2>
-            <div class="goToBox" onclick="location.href = 'recycleBin.html'">
+            <div class="goToBox">
                 <p>Jogos para crianças</p>
                 <p>&#187;</p>
             </div>
-            <div class="goToBox">
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'cuideVcMsm.html#recycle'
+            }, 300);">
                 <p>Ideias de reciclagens</p>
                 <p>&#187;</p>
             </div>
-            <div class="goToBox">
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'cuideVcMsm.html#video'
+            }, 300);">
                 <p>Videos</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox">
-                <p>Saiba onde descartar</p>
                 <p>&#187;</p>
             </div>
         </div>
@@ -150,11 +153,15 @@
             
             <h2>Doações</h2>
             Faça uma doação para ajudar o meio ambiente e o nosso planeta!
-            <div class="goToBox">
-                <p>Doe agora!</p>
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'doacoes2.html'
+            }, 300);">
+                <p>Faça sua doação</p>
                 <p>&#187;</p>
             </div>
-            <div class="goToBox">
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'doacoes.html'
+            }, 300);">
                 <p>Saiba mais sobre as doações</p>
                 <p>&#187;</p>
             </div>
@@ -182,26 +189,31 @@
                 <p>&#187;</p>
             </div>
             <div class="goToBox">
-                <p>X (Twitter)</p>
-                <p>&#187;</p>
-            </div>
-            <div class="goToBox">
-                <p>Threads</p>
+                <p>Snapchat</p>
                 <p>&#187;</p>
             </div>
 
         </div>
         <div class="quickBoxF">
             <h2>Sobre o time</h2>
-            <div class="goToBox">
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'aboutUs.html'
+                sessionStorage.setItem('functionToShow', 0)
+            }, 300);">
                 <p>Objetivos</p>
                 <p>&#187;</p>
             </div>
-            <div class="goToBox">
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'aboutUs.html'
+                sessionStorage.setItem('functionToShow', 2)
+            }, 300);">
                 <p>Missão</p>
                 <p>&#187;</p>
             </div>
-            <div class="goToBox">
+            <div class="goToBox" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'aboutUs.html'
+                sessionStorage.setItem('functionToShow', 1)
+            }, 300);">
                 <p>Sobre os integrantes do time</p>
                 <p>&#187;</p>
             </div>

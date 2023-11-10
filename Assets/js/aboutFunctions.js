@@ -11,6 +11,23 @@ const nicholasN = document.getElementById('nicholasName')
 const jussaraN = document.getElementById('jussaraName')
 const missionsN = document.getElementById('missionsName')
 
+let openF = sessionStorage.getItem('functionToShow')
+
+if (openF == 0) {
+    openGoals()
+} else if (openF == 1) {
+    openTeam()
+} else if (openF == 2) {
+    openMissions()
+} else if (openF == 1.1) {
+    openIgor()
+} else if (openF == 1.2) {
+    openNicholas()
+} else if (openF == 1.3) {
+    openJussara()
+}
+
+
 function openGoals() {
     goals.className = 'sectionActive'
     goalsN.className = 'h2Active'
@@ -24,6 +41,7 @@ function openGoals() {
     jussaraN.classList.remove('intNamesActive')
     missions.removeAttribute('class')
     missionsN.removeAttribute('class')
+    sessionStorage.setItem('functionToShow', 0)
 }
 
 function openTeam() {
@@ -39,6 +57,7 @@ function openTeam() {
     jussaraN.classList.remove('intNamesActive')
     missions.removeAttribute('class')
     missionsN.removeAttribute('class')
+    sessionStorage.setItem('functionToShow', 1)
 }
 
 function openIgor() {
@@ -54,6 +73,7 @@ function openIgor() {
     jussaraN.classList.remove('intNamesActive')
     missions.removeAttribute('class')
     missionsN.removeAttribute('class')
+    sessionStorage.setItem('functionToShow', 1.1)
 }
 
 function openNicholas() {
@@ -69,6 +89,7 @@ function openNicholas() {
     jussaraN.classList.remove('intNamesActive')
     missions.removeAttribute('class')
     missionsN.removeAttribute('class')
+    sessionStorage.setItem('functionToShow', 1.2)
 }
 
 function openJussara() {
@@ -84,6 +105,7 @@ function openJussara() {
     nicholasN.classList.remove('intNamesActive')
     missions.removeAttribute('class')
     missionsN.removeAttribute('class')
+    sessionStorage.setItem('functionToShow', 1.3)
 }
 
 function openMissions() {
@@ -99,4 +121,5 @@ function openMissions() {
     jussaraN.classList.remove('intNamesActive')
     goals.removeAttribute('class')
     goalsN.removeAttribute('class')
+    sessionStorage.setItem('functionToShow', 2)
 }
