@@ -24,3 +24,5 @@ function appearLangPop() {
         LangOpened = false
     }
 }
+
+/*Language Script*/
