@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future In Action</title>
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="shortcut icon" href="Assets/img/Logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="lbar">
+        <div class="exitbar" onclick="closeLbar()">
+        </div>
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'homeEnUs.html'
+        }, 300);">
+            <img src="Assets/img/Icons/LateralBarIcons/home.png" alt="">
+            Home
+        </div>
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'gossipEnUs.html'
+        }, 300);">
+            <img src="Assets/img/Icons/LateralBarIcons/news.png" alt="">
+            News
+        </div>
+        <div class="patchs lbarpage" onclick="closeLbar()">
+            <img src="Assets/img/Icons/LateralBarIcons/DIY.png" alt="">
+            Do It Yourself
+        </div>
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'donateEnUs.html'
+        }, 300);">
+            <img src="Assets/img/Icons/LateralBarIcons/donation.png" alt="">
+            Donate
+        </div>
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'contatos.html'
+        }, 300);">
+            <img src="Assets/img/Icons/LateralBarIcons/contact.png" alt="">
+            Contacts
+        </div>
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'aboutUs.html'
+        }, 300);">
+            <img src="Assets/img/Icons/LateralBarIcons/aboutUs.png" alt="">
+            About Us
+        </div>
+    </div>
+    <div class="barButton" onclick="openLbar()">
+        <div class="exitbar">
+        </div>
+    </div>
+    <header>
+        <div class="logo"></div>
+            <h1 class="nameHeader">Future In Action</h1>
+        <h1>Do It Yourself</h1>
+        <div class="langChoose">
+            <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
+            <div id="langPop">
+                Choose your language
+                <div class="lang">Português Brasileiro</div>
+                <div class="lang">English(US)</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="CVMCont" style="display: none;">
+        <h1 class="headersText">Games</h1>
+        Learn how to recycle and take care of the planet with educational games!<br>
+        <div class="box" id="g1" onclick="openg1()">
+            <div class="openViewer"></div>
+            <div class="name">
+                <h2>Recycling bins</h2>
+                <p>Learn how to throw garbage in the correct bins with this game</p>
+            </div>
+            <img src="Assets/img/DIY/Screenshots/RecycleBin.png" alt="">
+        </div>
+        <div class="box">
+            <div class="name">
+                <h2>Futuro Jogo</h2>
+            </div>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="CVMContFLX" id="recycle">
+        <h2 class="headersText">Recycling ideas</h2>
+    <div class="contentCVM">
+        <h1>Have fun with the kids!</h1>
+        <div class="image CVMimg1"></div>
+        Learn how to make a toy airplane out of a pet bottle and have fun helping the planet.
+    </div>
+
+    <div class="contentCVM">
+        <h1>How to recycle?</h1>
+        <div class="image CVMimg2"></div>
+        Learn how to recycle your home's garbage correctly and where to dispose of it
+    </div>
+
+    <div class="contentCVM">
+        <h1>Chic and sustainable</h1>
+        <div class="image CVMimg3"></div>
+        How to Make Beautiful Reusable, Chic and Versatile Decorations for Any Room
+    </div>
+
+    <div class="contentCVM">
+        <h1>Fun toy to make and play with</h1>
+        <div class="image CVMimg4"></div>
+
+        Learn and teach children how to create their recyclable toys and develop creativity.
+
+    </div>
+    </div>
+    <div class="CVMContFLX" id="video">
+        <h2 class="headersText">Learn with videos</h2>
+        <iframe src="https://www.youtube.com/embed/gdrMwkFo6Ao?si=0VBNhl2vXMprFkGs" frameborder="0" class="videos" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/RQ-C9A5t6dQ?si=8kpu19L-9TBpGThO" frameborder="0" class="videos" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/KWIEnztOXJU?si=oPj0tQXOkr9-x11R" frameborder="0" class="videos" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/EDBEDtGH-8k?si=BR3mtraQy6-phyc-" frameborder="0" class="videos" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/4OVW4SRYRp0?si=CvZ6R3w1Hk_vS3SB" frameborder="0" class="videos" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/lc6W-wKPNnc?si=s-1Jnu5SdD51HSL6" frameborder="0" class="videos" allowfullscreen></iframe>
+    </div>
+    <footer></footer>
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="Assets/js/universalFunctions.js"></script>
+<script src="Assets/js/CVMFunctions.js"></script>
+
+</html>

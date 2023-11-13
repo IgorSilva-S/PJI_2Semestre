@@ -13,13 +13,13 @@
     <div class="lbar">
         <div class="exitbar" onclick="closeLbar()">
         </div>
-        <div class="patchs lbarpage" onclick="closeLbar()">
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'homeEnUs.html'
+        }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/home.png" alt="">
             Home
         </div>
-        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'gossipEnUs.html'
-        }, 300);">
+        <div class="patchs lbarpage" onclick="closeLbar()">
             <img src="Assets/img/Icons/LateralBarIcons/news.png" alt="">
             News
         </div>
@@ -54,8 +54,8 @@
     </div>
     <header>
         <div class="logo"></div>
-            <h1 class="nameHeader">Future in Action</h1>
-        <h1>Home</h1>
+            <h1 class="nameHeader">Future In Action</h1>
+        <h1>News</h1>
         <div class="langChoose">
             <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
             <div id="langPop">
@@ -65,60 +65,62 @@
             </div>
         </div>
     </header>
-    <!--Início-->
-    <div class="welcomeBanner">
-        <div class="messageBoxWelcome">
-            <h1>Welcome to Future in Action</h1>
-            <p>Nature needs to be saved and you can help</p>
-            <div class="buttonStyle" onclick="openLbar()">
-                Browse and learn more
+    <h1 class="headersText">In this week:</h1>
+    <div class="carousel">
+        <div class="newsTrail">
+            <div class="newsInfo img1">
+                <div class="title">Cultural project in Ibirapuera</div>
+            </div>
+            <div class="newsInfo img2">
+                <div class="title">Water contamination, know the risks</div>
+            </div>
+            <div class="newsInfo img3">
+                <div class="title">Droughts in the Amazon, understand</div>
+            </div>
+            <div class="newsInfo img1">
+                <div class="title">Cultural project in Ibirapuera</div>
             </div>
         </div>
     </div>
-    <div class="sectionsBox">
-        <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'gossipEnUs.html'
-        }, 300);">
-            <img src="Assets/img/Icons/newsIcon.png" alt="">
-            <h2>News</h2>
-            <p>Get access to the latest news about the environment</p>
+
+    <div class="monthNews">
+        <h1 class="headersText">In this month:</h1>
+        <div class="bestMonth">
+            <img src="Assets/img/noticias/images (2).jfif" alt="">
+            Corporate-generated air pollutants are the biggest risk to humanity
+            <p>Read about &#187;</p>
+
         </div>
-        <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-           location.href = 'doItYourselfEnUS.html'
-        }, 300);">
-            <img src="Assets/img/Icons/cvmIcon.png" alt="">
-            <h2>Do It Yourself</h2>
-            <p>Create new things with what would otherwise be discarded and learn how to take care of our planet</p>
+    </div>
+    <div class="geralNews">
+        <h1 class="headersText">Another news:</h1>
+        <div class="box">
+            <img src="Assets/img/noticias/images (1).jfif" alt="">
+            Burns due to high temperatures cause serious damage
         </div>
-        <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'donateEnUs.html'
-        }, 300);">
-            <img src="Assets/img/Icons/donateIcon.png" alt="">
-            <h2>Donations</h2>
-            <p>Make a donation to the care of the environment</p>
+        <div class="box">
+            <img src="Assets/img/noticias/images (4).jfif" alt="">
+            Organic farming is the biggest investment today
         </div>
-        <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'contatos.html'
-        }, 300);">
-            <img src="Assets/img/Icons/contactIcon.png" alt="">
-            <h2>Contacts</h2>
-            <p>Chat with us through our social networks</p>
+        <div class="box">
+            <img src="Assets/img/noticias/images(5).jpg" alt="">
+            Residents in risk areas are in danger during the rainy season 
         </div>
-        <div class="box" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'aboutUs.html'
-        }, 300);">
-            <img src="Assets/img/Icons/teamIcon.png" alt="">
-            <h2>About Us</h2>
-            <p>Get to know a little about the developers of this site</p>
+        <div class="box">
+            <img src="Assets/img/noticias/images(6).jfif" alt="">
+            Environment Week, know the importance of this date
+        </div>
+        <div class="box">
+            <img src="Assets/img/noticias/images(7).jfif" alt="">
+            Disaster occurs in São Sebastião (SP) and kills 64 people
         </div>
     </div>
     <footer></footer>
-   
-        
 </body>
-<!--IonIcons-->
+
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="Assets/js/universalFunctions.js"></script>
+<script src="Assets/js/newsFunctions.js"></script>
 
 </html>
