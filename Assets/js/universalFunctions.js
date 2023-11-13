@@ -26,3 +26,18 @@ function appearLangPop() {
 }
 
 /*Language Script*/
+
+let translate = localStorage.getItem('English')
+let reloaded = sessionStorage.getItem('reload')
+
+if (translate == 1 && reloaded == null) {
+    document.body.style.opacity = '0'; setTimeout(() => {
+        location.href = 'homeEnUs.html'
+        sessionStorage.setItem('reload', 1)
+    }, 300);
+} else if (translate == 0 && reloaded == null) {
+    document.body.style.opacity = '0'; setTimeout(() => {
+        location.href = 'index.html'
+        sessionStorage.setItem('reload', 1)
+    }, 300);
+}

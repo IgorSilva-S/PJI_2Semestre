@@ -60,8 +60,11 @@
             <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
             <div id="langPop">
                 Selecione seu idioma
-                <div class="lang">Português Brasileiro</div>
-                <div class="lang">English(US)</div>
+                <div class="lang" onclick="appearLangPop()">Português Brasileiro</div>
+                <div class="lang" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                            location.href = 'gossipEnUs.html'
+                            localStorage.setItem('English', 1)
+                        }, 300);">English(US)</div>
             </div>
         </div>
     </header>

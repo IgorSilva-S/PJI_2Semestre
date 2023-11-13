@@ -13,42 +13,41 @@
     <div class="lbar">
         <div class="exitbar" onclick="closeLbar()">
         </div>
-        <div class="patchs" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'index.html'
-        }, 300);">
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                    location.href = 'homeEnUs.html'
+                }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/home.png" alt="">
-            Início
+            Home
         </div>
-        <div class="patchs" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'fofocas.html'
-        }, 300);">
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'gossipEnUs.html'
+            }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/news.png" alt="">
-            Notícias
+            News
         </div>
-        <div class="patchs" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'cuideVcMsm.html'
-        }, 300);">
+        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'doItYourselfEnUS.html'
+            }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/DIY.png" alt="">
-            Cuide você mesmo
+            Do It Yourself
         </div>
-        <div class="patchs lbarpage" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'doacoes.html'
-        }, 300);">
+        <div class="patchs lbarpage" onclick="closeLbar()">
             <img src="Assets/img/Icons/LateralBarIcons/donation.png" alt="">
-            Doações
+            Donate
         </div>
-        <div class="patchs" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'contatos.html'
-        }, 300);">
-            <img src="Assets/img/Icons/LateralBarIcons/contact.png" alt="">
-            Contato
-        </div>
-        <div class="patchs" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'aboutUs.html'
-        }, 300);">
-            <img src="Assets/img/Icons/LateralBarIcons/aboutUs.png" alt="">
-            Sobre nós
-        </div>
+    <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'contactsEnUs.html'
+            }, 300);">
+        <img src="Assets/img/Icons/LateralBarIcons/contact.png" alt="">
+        Contacts
+    </div>
+    <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'aboutUsEnUs.html'
+            }, 300);">
+        <img src="Assets/img/Icons/LateralBarIcons/aboutUs.png" alt="">
+        About Us
+    </div>
+    </div>
     </div>
     <div class="barButton" onclick="openLbar()">
         <div class="exitbar">
@@ -56,55 +55,62 @@
     </div>
     <header>
         <div class="logo"></div>
-        <h1 class="nameHeader">Futuro em Ação</h1>
-        <h1>Doações</h1>
+        <h1 class="nameHeader">Future In Action</h1>
+        <h1>Donations</h1>
         <div class="langChoose">
             <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
             <div id="langPop">
-                Selecione seu idioma
-                <div class="lang">Português Brasileiro</div>
-                <div class="lang">English(US)</div>
+                Choose your language
+                <div class="lang" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                        location.href = 'doacoes.html'
+                    }, 300); localStorage.setItem('English', 0)">Português Brasileiro</div>
+                <div class="lang" onclick="appearLangPop()">English(US)</div>
             </div>
         </div>
     </header>
 
     <form action="" class="formsDonate">
         <div class="flexContent" style="flex-direction: row;">
-            <div class="titleDonate">por que e para quem doar?</div>
+            <div class="titleDonate">Why and to whom to donate?</div>
             <div class="textDoacao">
-                <p class="principalText">Doando no nosso site você pode apoiar e ajudar ongs ambientais a manterem
-                    projetos que irão salvar o
-                    planeta, você vai
-                    ver a diferença ao seu redor!
-                    Uma pequena quantia pode fazer a total diferença no mundo.</p>
+                <p class="principalText">By donating on our website you can support and help environmental NGOs to
+                    maintain
+                    Projects that will save the
+                    planet, you will
+                    See the difference all around you!
+                    A small amount can make all the difference in the world.</p>
+                <p>In the dictionary, to donate means "to transfer freely to another person, in a legal way, well,
+                    amount,
+                    property
+                    or
+                    advantages, etc., which were formerly in his possession."</p>
+                <p>But we, at Future in Action, know that giving is much more than
+                    Right.
+                    The act of donating effectively contributes to the improvement of society, institutions and, above
+                    all, the
+                    people. To
+                    By seeing the needs of others and doing something to meet them, we become more just and
+                    Equal.</p>
+                <p>"Don't expect to have too much
+                    to be able to help others.
+                    When the desire to donate
+                    Sprout in your heart, DONATE!
+                    For little will become much." - Bia Cortéz - Translated</p>
                 <img src="Assets/img/doacoes/folha.top.png" class="folhatop" alt="">
-                <p>No dicionário, doar significa “transferir gratuitamente a outra pessoa, de forma legal, bem, quantia,
-                    imóvel
-                    ou
-                    vantagens etc. que antes era de sua posse”.</p>
-                <p>Mas nós, do Futuro em Ação, sabemos que doar é muito mais do que
-                    isso.
-                    O ato de doar contribui efetivamente para melhorar a sociedade, as instituições e, principalmente as
-                    pessoas. Ao
-                    enxergar as necessidades do próximo e fazer algo para supri-las, nos tornamos mais justos e
-                    igualitários.</p>
-                <p>"Não espere ter muito
-                    para poder ajudar o próximo.
-                    Quando o desejo de doar
-                    brotar em seu coração, DOE!
-                    Pois o pouco se tornará muito." - Bia Cortéz</p>
                 <img src="Assets/img/doacoes/folha.bottom.png" class="folhabottom" alt="">
             </div>
         </div>
         <div class="flexContent">
-            <p class="headersText">Envie o seu formulário para doação</p>
-            <input type="text" name="Nome" id="name" class="inpName" placeholder="Nome Completo" required>
+            <p class="headersText">Submit your donation form</p>
+            <input type="text" name="Nome" id="name" class="inpName" placeholder="Full name" required>
             <input type="email" name="Email" id="mail" class="inpMail" placeholder="Email" required>
-            <input type="text" name="Tel" id="telephone" class="inpTel" placeholder="Número de telefone" required>
-            <input type="text" name="Endereco" id="address" class="inpLocal" placeholder="Endereço" required>
-            <input type="number" name="" id="value" class="inpDonate" placeholder="Valor" step=".01">
-            <button class="donateButton" onclick="donate()">Doar</button>
+            <input type="text" name="Tel" id="telephone" class="inpTel" placeholder="Telephone number" required>
+            <input type="text" name="Endereco" id="address" class="inpLocal" placeholder="Address" required>
+            <input type="number" name="" id="value" class="inpDonate" placeholder="Value" step=".01" required>
+            <button class="donateButton" onclick="donate()">Donate</button>
         </div>
+
+
 
     </form>
 

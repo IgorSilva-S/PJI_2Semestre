@@ -54,14 +54,17 @@
     </div>
     <header>
         <div class="logo"></div>
-            <h1 class="nameHeader">Futuro em Ação</h1>
+        <h1 class="nameHeader">Futuro em Ação</h1>
         <h1>Cuide Você Mesmo</h1>
         <div class="langChoose">
             <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
             <div id="langPop">
                 Selecione seu idioma
-                <div class="lang">Português Brasileiro</div>
-                <div class="lang">English(US)</div>
+                <div class="lang" onclick="appearLangPop()">Português Brasileiro</div>
+                <div class="lang" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                            location.href = 'doItYourselfEnUs.html'
+                            localStorage.setItem('English', 1)
+                        }, 300);">English(US)</div>
             </div>
         </div>
     </header>
@@ -87,40 +90,46 @@
     </div>
     <div class="CVMContFLX" id="recycle">
         <h2 class="headersText">Ideias de reciclagens</h2>
-    <div class="contentCVM">
-        <h1>Divirta-se com as crianças!</h1>
-        <div class="image CVMimg1"></div>
-        Aprenda a fazer um avião de brinquedo com garrafa pet e se divirta ajudando o planeta.
-    </div>
+        <div class="contentCVM">
+            <h1>Divirta-se com as crianças!</h1>
+            <div class="image CVMimg1"></div>
+            Aprenda a fazer um avião de brinquedo com garrafa pet e se divirta ajudando o planeta.
+        </div>
 
-    <div class="contentCVM">
-        <h1>Como reciclar?</h1>
-        <div class="image CVMimg2"></div>
-        Saiba como reciclar o lixo da sua casa corretamente e onde descartá-los
-    </div>
+        <div class="contentCVM">
+            <h1>Como reciclar?</h1>
+            <div class="image CVMimg2"></div>
+            Saiba como reciclar o lixo da sua casa corretamente e onde descartá-los
+        </div>
 
-    <div class="contentCVM">
-        <h1>Chique e sustentável</h1>
-        <div class="image CVMimg3"></div>
-        Como fazer belíssimas decorações com reutilizáveis, chiques e versáteis para qualquer ambiente
-    </div>
+        <div class="contentCVM">
+            <h1>Chique e sustentável</h1>
+            <div class="image CVMimg3"></div>
+            Como fazer belíssimas decorações com reutilizáveis, chiques e versáteis para qualquer ambiente
+        </div>
 
-    <div class="contentCVM">
-        <h1>Brinquedo divertido de fazer e brincar</h1>
-        <div class="image CVMimg4"></div>
+        <div class="contentCVM">
+            <h1>Brinquedo divertido de fazer e brincar</h1>
+            <div class="image CVMimg4"></div>
 
-        Aprenda e ensine as crianças a criar seus brinquedos recicláveis e desenvolver a criatividade.
+            Aprenda e ensine as crianças a criar seus brinquedos recicláveis e desenvolver a criatividade.
 
-    </div>
+        </div>
     </div>
     <div class="CVMContFLX" id="video">
         <h2 class="headersText">Aprenda com vídeos</h2>
-        <iframe src="https://www.youtube.com/embed/gdrMwkFo6Ao?si=0VBNhl2vXMprFkGs" frameborder="0" class="videos" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/RQ-C9A5t6dQ?si=8kpu19L-9TBpGThO" frameborder="0" class="videos" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/KWIEnztOXJU?si=oPj0tQXOkr9-x11R" frameborder="0" class="videos" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/EDBEDtGH-8k?si=BR3mtraQy6-phyc-" frameborder="0" class="videos" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/4OVW4SRYRp0?si=CvZ6R3w1Hk_vS3SB" frameborder="0" class="videos" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/lc6W-wKPNnc?si=s-1Jnu5SdD51HSL6" frameborder="0" class="videos" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/gdrMwkFo6Ao?si=0VBNhl2vXMprFkGs" frameborder="0" class="videos"
+            allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/RQ-C9A5t6dQ?si=8kpu19L-9TBpGThO" frameborder="0" class="videos"
+            allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/KWIEnztOXJU?si=oPj0tQXOkr9-x11R" frameborder="0" class="videos"
+            allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/EDBEDtGH-8k?si=BR3mtraQy6-phyc-" frameborder="0" class="videos"
+            allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/4OVW4SRYRp0?si=CvZ6R3w1Hk_vS3SB" frameborder="0" class="videos"
+            allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/lc6W-wKPNnc?si=s-1Jnu5SdD51HSL6" frameborder="0" class="videos"
+            allowfullscreen></iframe>
     </div>
     <footer></footer>
 </body>

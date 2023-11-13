@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuro em Ação</title>
+    <title>Future In Action</title>
     <link rel="stylesheet" href="Assets/css/style.css">
     <link rel="shortcut icon" href="Assets/img/Logo.png" type="image/x-icon">
 </head>
@@ -15,38 +15,38 @@
         <div class="exitbar" onclick="closeLbar()">
         </div>
         <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'index.html'
+            location.href = 'homeEnUs.html'
         }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/home.png" alt="">
-            Início
+            Home
         </div>
         <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'fofocas.html'
-        }, 300);">
+                location.href = 'gossipEnUs.html'
+            }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/news.png" alt="">
-            Notícias
+            News
         </div>
         <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'cuideVcMsm.html'
-        }, 300);">
+                location.href = 'doItYourselfEnUS.html'
+            }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/DIY.png" alt="">
-            Cuide você mesmo
+            Do It Yourself
         </div>
         <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'doacoes.html'
-        }, 300);">
+                location.href = 'donateEnUs.html'
+            }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/donation.png" alt="">
-            Doações
+            Donate
         </div>
         <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'contatos.html'
-        }, 300);">
+                    location.href = 'contactsEnUs.html'
+                }, 300);">
             <img src="Assets/img/Icons/LateralBarIcons/contact.png" alt="">
-            Contato
+            Contacts
         </div>
-        <div class="patchs lbarpage" onclick="closeLbar()">
+        <div class="patchs  lbarpage" onclick="closeLbar()">
             <img src="Assets/img/Icons/LateralBarIcons/aboutUs.png" alt="">
-            Sobre nós
+            About Us
         </div>
     </div>
     <div class="barButton" onclick="openLbar()">
@@ -55,29 +55,28 @@
     </div>
     <header>
         <div class="logo"></div>
-        <h1 class="nameHeader">Futuro em Ação</h1>
-        <h1>Sobre nós</h1>
+        <h1 class="nameHeader">Future In Action</h1>
+        <h1>About Us</h1>
         <div class="langChoose">
             <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
             <div id="langPop">
-                Selecione seu idioma
-                <div class="lang" onclick="appearLangPop()">Português Brasileiro</div>
+                Choose your language
                 <div class="lang" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-                            location.href = 'aboutUsEnUs.html'
-                            localStorage.setItem('English', 1)
-                        }, 300);">English(US)</div>
+                        location.href = 'aboutUs.html'
+                    }, 300); localStorage.setItem('English', 0)">Português Brasileiro</div>
+                <div class="lang" onclick="appearLangPop()">English(US)</div>
             </div>
         </div>
     </header>
     <section id="goals" class="sectionActive">
         <div class="stylePerson"></div>
-        <h1>Objetivos</h1>
-        Nosso site tem como objetivo conscientizar as pessoas sobre a importância de cuidar do meio ambiente, divulgar
-        doações
-        em ONGs e informar os usuários de forma completa com notícias e tutoriais.
-        Vamos ensinar os usuários , adultos e crianças, de forma divertida a viver de forma sustentável e como fazer a
-        diferença
-        em nossa luta pelo mundo.
+        <h1>Goals</h1>
+        Our website aims to make people aware of the importance of taking care of the environment, spreading the word about
+        Donations
+        in NGOs and inform users in a complete way with news and tutorials.
+        We will teach users, adults and children, in a fun way how to live sustainably and how to do the
+        difference
+        in our struggle for the world.
         <div class="sectionImages">
             <img src="Assets/img/objetivos/download.jfif" alt="">
             <img src="Assets/img/objetivos/images (1).jfif" alt="">
@@ -86,12 +85,12 @@
     </section>
     <section id="team">
         <div class="stylePerson"></div>
-        <h1>Integrantes do time</h1>
-        Conheça sobre os integrantes do nosso time:<br><br>
+        <h1>Team members</h1>
+        Get to know the members of our team:<br><br>
         <p onclick="openIgor()">Igor Silva Santos</p>
-        Programador e Designer<br><br>
+        Programmer and Designer<br><br>
         <p onclick="openNicholas()">Nicholas Souza Camargo</p>
-        Desenvolvedor<br><br>
+        Developer<br><br>
         <p onclick="openJussara()">Jussara Martins de Sousa</p>
         Designer<br>
         <div class="sectionImages">
@@ -103,37 +102,39 @@
     <section id="igor">
         <div class="stylePerson"></div>
         <h1>Igor Silva Santos</h1>
-        Programador e designer do Futuro em Ação, é aluno do IFSP e cursa tecnologia da informação e comunicação. Seu
-        maior objetivo é tornar a internet um local mais agradável de se navegar, contribuindo com sites que todos
-        conseguem ter acesso e utilizar com facilidade.
+        Programmer and designer of Future in Action, he is a student at IFSP and is studying information and communication
+        technology. Your
+        The main goal is to make the internet a more pleasant place to navigate, contributing to sites that everyone
+         can easily access and use it.
         <div class="personImage"></div>
     </section>
     <section id="nicholas">
         <div class="stylePerson"></div>
         <h1>Nicholas Souza Camargo</h1>
-        Desenvolvedor web do Futuro em Ação, é aluno do IFSP e cursa tecnologia da informação e comunicação. seu
-        objetivo é
-        criar um site que conscientize os usuários e seja atrativo.
+        Web developer of Future in Action, he is a student at IFSP and is studying information and communication technology.
+        your
+        The goal is to
+        Create a website that makes users aware and is attractive.
         <div class="personImage"></div>
     </section>
     <section id="jussara">
         <div class="stylePerson"></div>
         <h1>Jussara Martins de Sousa</h1>
-        Designer e administradora do Futuro em Ação, é aluna do IFSP cursando tecnologia da informação, seu objetivo
-        profissional é ser capaz de analisar o que o cliente precisa e proporcionar os melhores resultados para a
-        indústria web.
+        Designer and administrator of Future in Action, she is an IFSP student studying information technology, her goal
+        professional is to be able to analyze what the client needs and provide the best results for the
+        web industry.
         <div class="personImage"></div>
     </section>
     <section id="missions">
         <div class="stylePerson"></div>
-        <h1>Missões</h1>
-        Nossa missão como associação pró-meio ambiente é promover a saúde da flora paulista, apoiar movimentos
-        ambientais e
-        manter a população informada com artigos e notícias das conquistas e desastres na capital na capital .
+        <h1>Missions</h1>
+        Our mission as a pro-environment association is to promote the health of São Paulo's flora, to support movements
+        environmental and
+        Keep the population informed with articles and news of the conquests and disasters in the capital in the capital.
         <br><br>
-        Acreditamos que com a educação e informação todos podemos aprender a cuidar do ecossistema no cotidiano e
-        resgatar o
-        planeta.
+        We believe that with education and information, we can all learn to take care of the ecosystem in our daily lives and
+        Redeem the
+        planet.
         <div class="sectionImages">
             <img src="Assets/img/missoes/2f66f8656ee1c17d41c8b23afcb1d380.jpg" alt="">
             <img src="Assets/img/missoes/5d8410f1b6891cf4c6aedb7652ed184f.jpg" alt="">
@@ -141,12 +142,12 @@
         </div>
     </section>
     <nav class="navAbUs">
-        <h2 class="h2Active" id="goalsName" onclick="openGoals()">Objetivos</h2>
-        <h2 id="teamName" onclick="openTeam()">Integrantes</h2>
+        <h2 class="h2Active" id="goalsName" onclick="openGoals()">Goals</h2>
+        <h2 id="teamName" onclick="openTeam()">Members</h2>
         <p class="intNames" id="igorName" onclick="openIgor()">Igor Silva Santos</p>
         <p class="intNames" id="nicholasName" onclick="openNicholas()">Nicholas Souza Camargo</p>
         <p class="intNames" id="jussaraName" onclick="openJussara()">Jussara Martins de Sousa</p>
-        <h2 id="missionsName" onclick="openMissions()">Missões</h2>
+        <h2 id="missionsName" onclick="openMissions()">Missions</h2>
     </nav>
 </body>
 

@@ -674,6 +674,9 @@ footer {
     position: absolute;
     top: 50px;
     font-family: var(--headerText);
+    padding: 15px;
+    background-color: var(--translucentSmokedWhite);
+    backdrop-filter: blur(20px);
 }
 
 .textDoacao {

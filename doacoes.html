@@ -31,9 +31,7 @@
             <img src="Assets/img/Icons/LateralBarIcons/DIY.png" alt="">
             Cuide você mesmo
         </div>
-        <div class="patchs lbarpage" onclick="document.body.removeAttribute('class'), document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'doacoes.html'
-        }, 300);">
+        <div class="patchs lbarpage" onclick="closeLbar()">
             <img src="Assets/img/Icons/LateralBarIcons/donation.png" alt="">
             Doações
         </div>
@@ -62,8 +60,11 @@
             <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
             <div id="langPop">
                 Selecione seu idioma
-                <div class="lang">Português Brasileiro</div>
-                <div class="lang">English(US)</div>
+                <div class="lang" onclick="appearLangPop()">Português Brasileiro</div>
+                <div class="lang" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                                            location.href = 'donateEnUs.html'
+                                            localStorage.setItem('English', 1)
+                                        }, 300);">English(US)</div>
             </div>
         </div>
     </header>
@@ -77,7 +78,6 @@
                     planeta, você vai
                     ver a diferença ao seu redor!
                     Uma pequena quantia pode fazer a total diferença no mundo.</p>
-                <img src="Assets/img/doacoes/folha.top.png" class="folhatop" alt="">
                 <p>No dicionário, doar significa “transferir gratuitamente a outra pessoa, de forma legal, bem, quantia,
                     imóvel
                     ou
@@ -93,6 +93,7 @@
                     Quando o desejo de doar
                     brotar em seu coração, DOE!
                     Pois o pouco se tornará muito." - Bia Cortéz</p>
+                <img src="Assets/img/doacoes/folha.top.png" class="folhatop" alt="">
                 <img src="Assets/img/doacoes/folha.bottom.png" class="folhabottom" alt="">
             </div>
         </div>
@@ -102,10 +103,9 @@
             <input type="email" name="Email" id="mail" class="inpMail" placeholder="Email" required>
             <input type="text" name="Tel" id="telephone" class="inpTel" placeholder="Número de telefone" required>
             <input type="text" name="Endereco" id="address" class="inpLocal" placeholder="Endereço" required>
-            <input type="number" name="" id="value" class="inpDonate" placeholder="Valor" step=".01">
+            <input type="number" name="" id="value" class="inpDonate" placeholder="Valor" step=".01" required>
             <button class="donateButton" onclick="donate()">Doar</button>
         </div>
-
     </form>
 
 </body>

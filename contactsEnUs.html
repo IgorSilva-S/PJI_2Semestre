@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future In Action</title>
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="shortcut icon" href="Assets/img/Logo.png" type="image/x-icon">
+</head>
+
+<body>
+<div class="lbar">
+    <div class="exitbar" onclick="closeLbar()">
+    </div>
+    <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'homeEnUs.html'
+        }, 300);">
+        <img src="Assets/img/Icons/LateralBarIcons/home.png" alt="">
+        Home
+    </div>
+    <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'gossipEnUs.html'
+        }, 300);">
+        <img src="Assets/img/Icons/LateralBarIcons/news.png" alt="">
+        News
+    </div>
+    <div class="patchs"  onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'doItYourselfEnUS.html'
+            }, 300);">
+        <img src="Assets/img/Icons/LateralBarIcons/DIY.png" alt="">
+        Do It Yourself
+    </div>
+    <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'donateEnUs.html'
+        }, 300);">
+        <img src="Assets/img/Icons/LateralBarIcons/donation.png" alt="">
+        Donate
+    </div>
+    <div class="patchs  lbarpage" onclick="closeLbar()">
+        <img src="Assets/img/Icons/LateralBarIcons/contact.png" alt="">
+        Contacts
+    </div>
+    <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+            location.href = 'aboutUsEnUs.html'
+        }, 300);">
+        <img src="Assets/img/Icons/LateralBarIcons/aboutUs.png" alt="">
+        About Us
+    </div>
+</div>
+    <div class="barButton" onclick="openLbar()">
+        <div class="exitbar">
+        </div>
+    </div>
+    <header>
+        <div class="logo"></div>
+        <h1 class="nameHeader">Future In Action</h1>
+        <h1>Contacts</h1>
+        <div class="langChoose">
+            <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
+            <div id="langPop">
+                Choose your language
+                <div class="lang" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                        location.href = 'contatos.html'
+                    }, 300); localStorage.setItem('English', 0)">Português Brasileiro</div>
+                <div class="lang" onclick="appearLangPop()">English(US)</div>
+            </div>
+        </div>
+    </header>
+    <div class="stylePerson"></div>
+    <div class="conttop">
+        <h2>
+            Send us a suggestion and<br>
+            Follow our social networks
+        </h2>
+        <img class="imgtopcont" src="Assets/img/contatos/img(1).jpg" alt="">
+    </div>
+
+    <div class="contbotton">
+        <div class="iconscont">
+            <img class="contimg" src="Assets/img/contatos/insta (1).png" alt="">
+            <p>xxxxxxxx</p>
+        </div>
+        <div class="iconscont">
+            <img class="contimg" src="Assets/img/contatos/telefone (1).png" alt="">
+            <p>xxxxxxxx</p>
+        </div>
+        <div class="iconscont">
+            <img class="contimg" src="Assets/img/contatos/snap (1).png" alt="">
+            <p>xxxxxxxx</p>
+        </div>
+        <div class="iconscont">
+            <img class="contimg" src="Assets/img/contatos/zap (1).png" alt="">
+            <p>xxxxxxxx</p>
+        </div>
+        <div class="iconscont">
+            <img class="contimg" src="Assets/img/contatos/email (1).png" alt="">
+            <p>xxxxxxxx</p>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="Assets/js/universalFunctions.js"></script>
+
+</html>

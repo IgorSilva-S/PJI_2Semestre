@@ -35,18 +35,18 @@
             <img src="Assets/img/Icons/LateralBarIcons/donation.png" alt="">
             Donate
         </div>
-        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'contatos.html'
-        }, 300);">
-            <img src="Assets/img/Icons/LateralBarIcons/contact.png" alt="">
-            Contacts
-        </div>
-        <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
-            location.href = 'aboutUs.html'
-        }, 300);">
-            <img src="Assets/img/Icons/LateralBarIcons/aboutUs.png" alt="">
-            About Us
-        </div>
+    <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'contactsEnUs.html'
+            }, 300);">
+        <img src="Assets/img/Icons/LateralBarIcons/contact.png" alt="">
+        Contacts
+    </div>
+    <div class="patchs" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                location.href = 'aboutUsEnUs.html'
+            }, 300);">
+        <img src="Assets/img/Icons/LateralBarIcons/aboutUs.png" alt="">
+        About Us
+    </div>
     </div>
     <div class="barButton" onclick="openLbar()">
         <div class="exitbar">
@@ -60,8 +60,10 @@
             <ion-icon name="earth-outline" onclick="appearLangPop()" class="langB"></ion-icon>
             <div id="langPop">
                 Choose your language
-                <div class="lang">Português Brasileiro</div>
-                <div class="lang">English(US)</div>
+                <div class="lang" onclick="document.body.style.opacity = '0'; setTimeout(() => {
+                        location.href = 'fofocas.html'
+                    }, 300); localStorage.setItem('English', 0)">Português Brasileiro</div>
+                <div class="lang" onclick="appearLangPop()">English(US)</div>
             </div>
         </div>
     </header>
