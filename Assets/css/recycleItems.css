@@ -9,8 +9,12 @@
     position: absolute;
     right: 0;
     top: 0;
-    background-color: #555;
     overflow: hidden;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .conveyor>.conveyorTexture {
@@ -20,15 +24,16 @@
     background-image: url(../img/GamesImage/RecycleItems/ConveyorTexture.png);
     background-size: 100%;
     animation-name: running;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    z-index: 1;
 }
 
 @keyframes running {
-    from {
-        top: 0
-    } to {
+    0% {
+        top: 0;
+    } 100% {
         top: -100%;
     }
 }
@@ -51,3 +56,68 @@
     border-radius: 8px;
     box-sizing: border-box;
 }
+
+.trashs {
+    width: 120px;
+    height: 120px;
+    animation-name: slideTrash;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    top: calc(100% + 130px);
+    z-index: 990;
+    position: absolute;
+}
+
+.t2 {
+    animation-delay: .4s;
+}
+
+.t3 {
+    animation-delay: .8s;
+}
+
+.t4 {
+    animation-delay: 1.2s;
+}
+
+@keyframes slideTrash {
+    from {
+        top: calc(100% + 130px)
+    } to {
+        top: -130px
+    }
+}
+
+.plastic {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/GamesImage/RecycleBin/plasticTrash.png);
+}
+
+
+.paper {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/GamesImage/RecycleBin/paperTrash.png);
+}
+
+
+.metal {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/GamesImage/RecycleBin/metalTrash.png);
+}
+
+
+.glass {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/GamesImage/RecycleBin/glassTrash.png);
+}
+
+
