@@ -24,7 +24,7 @@
     background-image: url(../img/GamesImage/RecycleItems/ConveyorTexture.png);
     background-size: 100%;
     animation-name: running;
-    animation-duration: 1.5s;
+    animation-duration: 1.6s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     z-index: 1;
@@ -62,27 +62,27 @@
     height: 120px;
     animation-name: slideTrash;
     animation-iteration-count: infinite;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-timing-function: linear;
     top: calc(100% + 130px);
-    z-index: 990;
+    z-index: 2;
     position: absolute;
 }
 
 .t2 {
-    animation-delay: .4s;
+    animation-delay: .5s;
 }
 
 .t3 {
-    animation-delay: .8s;
+    animation-delay: 1.0s;
 }
 
 .t4 {
-    animation-delay: 1.2s;
+    animation-delay: 1.5s;
 }
 
 @keyframes slideTrash {
-    from {
+    0% {
         top: calc(100% + 130px)
     } to {
         top: -130px
@@ -121,3 +121,63 @@
 }
 
 
+.controls {
+    width: 25%;
+    height: 20%;
+    position: fixed;
+    right: -25%;
+    bottom: 30px;
+    border-radius: 8px;
+    background-color: #0f5f5399;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .3s;
+}
+
+.opened {
+    right: 30px;
+}
+
+.openandcloseControls {
+    width: 10%;
+    height: 60px;
+    position: absolute;
+    left: -10%;
+    top: calc(50% - 30px);
+    border-radius: 120px 0 0 120px;
+    background-color: #0f5f5399;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.openandcloseControls>img {
+    width: 40px;
+    height: 40px;
+}
+
+.controls>button {
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+    background-color: transparent;
+    border-radius: 4px;
+    transition-duration: .3s;
+    border: none;
+    color: white;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls>button:hover {
+    background-color: #f0f0f099;
+}
+
+.controls>.closeButton {
+    font-size: 120px;
+}
