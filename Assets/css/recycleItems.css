@@ -24,7 +24,7 @@
     background-image: url(../img/GamesImage/RecycleItems/ConveyorTexture.png);
     background-size: 100%;
     animation-name: running;
-    animation-duration: 1.6s;
+    animation-duration: 3.15s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     z-index: 1;
@@ -55,14 +55,15 @@
     border: 4px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
+    background-color: #555;
 }
 
 .trashs {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     animation-name: slideTrash;
     animation-iteration-count: infinite;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-timing-function: linear;
     top: calc(100% + 130px);
     z-index: 2;
@@ -70,15 +71,15 @@
 }
 
 .t2 {
-    animation-delay: .5s;
+    animation-delay: 1s;
 }
 
 .t3 {
-    animation-delay: 1.0s;
+    animation-delay: 2s;
 }
 
 .t4 {
-    animation-delay: 1.5s;
+    animation-delay: 3s;
 }
 
 @keyframes slideTrash {
@@ -93,7 +94,7 @@
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../img/GamesImage/RecycleBin/plasticTrash.png);
+    background-image: url(../img/GamesImage/RecycleItems/plastic.png);
 }
 
 
@@ -101,7 +102,7 @@
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../img/GamesImage/RecycleBin/paperTrash.png);
+    background-image: url(../img/GamesImage/RecycleItems/paper.png);
 }
 
 
@@ -109,7 +110,7 @@
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../img/GamesImage/RecycleBin/metalTrash.png);
+    background-image: url(../img/GamesImage/RecycleItems/metal.png);
 }
 
 
@@ -117,7 +118,7 @@
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../img/GamesImage/RecycleBin/glassTrash.png);
+    background-image: url(../img/GamesImage/RecycleItems/glass.png);
 }
 
 
@@ -141,6 +142,10 @@
     right: 30px;
 }
 
+.opened>.openandcloseControls>img {
+    rotate: 180deg;
+}
+
 .openandcloseControls {
     width: 10%;
     height: 60px;
@@ -150,7 +155,7 @@
     border-radius: 120px 0 0 120px;
     background-color: #0f5f5399;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
