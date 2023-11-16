@@ -148,6 +148,20 @@
     background-image: url(../img/GamesImage/RecycleItems/glass.png);
 }
 
+.rag {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/GamesImage/RecycleItems/rag.png);
+}
+
+.crumpPaper {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/GamesImage/RecycleItems/crumpPaper.png);
+}
+
 
 .controls {
     width: 25%;
@@ -212,4 +226,46 @@
 
 .controls>.closeButton {
     font-size: 120px;
+}
+
+.tableCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: calc(100% - 250px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.tableCont>.table {
+    width: 75%;
+    height: 75%;
+    position: absolute;
+    background-color: #503530;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table>.creation {
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ragDoll {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/RagDoll.png);
+}
+
+.telephone {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/Telephone.png);
+}
+
+.cardboxToy {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/CardboxToy.png);
 }
