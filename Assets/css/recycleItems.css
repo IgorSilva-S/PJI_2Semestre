@@ -56,6 +56,33 @@
     border-radius: 8px;
     box-sizing: border-box;
     background-color: #555;
+    position: relative;
+}
+
+.slotItems>button {
+    padding: 20px 30px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid #0f5f53;
+    background-color: #0f5f53;
+    color: white;
+    transition-duration: .3s;
+}
+
+.slotItems>button:hover {
+    background-color: #357738;
+    border-color: #357738;
+}
+
+.slotItems>.slot>.removeItem {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: red;
+    font-size: 50px;
+    cursor: pointer;
 }
 
 .trashs {

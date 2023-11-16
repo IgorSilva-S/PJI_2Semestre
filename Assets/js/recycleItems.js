@@ -357,6 +357,30 @@ function grabtr4() {
     }
 }
 
+function removeSl0() {
+    let slot0 = document.getElementById('slot0')
+    slot0.className = 'slot'
+    s1fill = false
+}
+
+function removeSl1() {
+    let slot1 = document.getElementById('slot1')
+    slot1.className = 'slot'
+    s2fill = false
+}
+
+function removeSl2() {
+    let slot2 = document.getElementById('slot2')
+    slot2.className = 'slot'
+    s3fill = false
+}
+
+function removeSl3() {
+    let slot3 = document.getElementById('slot3')
+    slot3.className = 'slot'
+    s4fill = false
+}
+
 function opencloseControls() {
     let controls = document.querySelector('.controls')
     controls.classList.toggle('opened')
