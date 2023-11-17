@@ -17,7 +17,7 @@ const create = document.querySelector('[game2-creation]')
 5 - Papel Amassado*/
 
 tr1.addEventListener('animationiteration', () => {
-    let random = Math.floor(Math.random() * 6)
+    let random = Math.floor(Math.random() * 7)
     tr1.className = 'trashs'
     if (random == 0) {
         tr1.classList.add('paper')
@@ -37,11 +37,15 @@ tr1.addEventListener('animationiteration', () => {
     } else if (random == 5) {
         tr1.classList.add('crumpPaper')
         tr1.value = 5
+    }  else if (random == 6) {
+        tr1.classList.add('gBottle')
+        tr1.value = 6
     }
+    tr1.removeAttribute('style')
 })
 
 tr2.addEventListener('animationiteration', () => {
-    let random = Math.floor(Math.random() * 6)
+    let random = Math.floor(Math.random() * 7)
     tr2.className = 'trashs t2'
     if (random == 0) {
         tr2.classList.add('paper')
@@ -61,11 +65,15 @@ tr2.addEventListener('animationiteration', () => {
     } else if (random == 5) {
         tr2.classList.add('crumpPaper')
         tr2.value = 5
+    }  else if (random == 6) {
+        tr2.classList.add('gBottle')
+        tr2.value = 6
     }
+    tr2.removeAttribute('style')
 })
 
 tr3.addEventListener('animationiteration', () => {
-    let random = Math.floor(Math.random() * 6)
+    let random = Math.floor(Math.random() * 7)
     tr3.className = 'trashs t3'
     if (random == 0) {
         tr3.classList.add('paper')
@@ -85,11 +93,15 @@ tr3.addEventListener('animationiteration', () => {
     } else if (random == 5) {
         tr3.classList.add('crumpPaper')
         tr3.value = 5
+    } else if (random == 6) {
+        tr3.classList.add('gBottle')
+        tr3.value = 6
     }
+    tr3.removeAttribute('style')
 })
 
 tr4.addEventListener('animationiteration', () => {
-    let random = Math.floor(Math.random() * 6)
+    let random = Math.floor(Math.random() * 7)
     tr4.className = 'trashs t4'
     if (random == 0) {
         tr4.classList.add('paper')
@@ -109,7 +121,11 @@ tr4.addEventListener('animationiteration', () => {
     } else if (random == 5) {
         tr4.classList.add('crumpPaper')
         tr4.value = 5
+    }  else if (random == 6) {
+        tr4.classList.add('gBottle')
+        tr4.value = 6
     }
+    tr4.removeAttribute('style')
 })
 
 // Grab trashes
@@ -144,6 +160,10 @@ function grabtr1() {
             slot0.classList.add('crumpPaper')
             s1fill = true
             s1fType = 6
+        }  else if (tr1.value == 6) {
+            slot0.classList.add('gBottle')
+            s1fill = true
+            s1fType = 7
         }
     } else if (s2fill == false) {
         slot1.className = 'slot'
@@ -171,6 +191,10 @@ function grabtr1() {
             slot1.classList.add('crumpPaper')
             s2fill = true
             s2fType = 6
+        }  else if (tr1.value == 6) {
+            slot1.classList.add('gBottle')
+            s2fill = true
+            s2fType = 7
         }
     } else if (s3fill == false) {
         slot2.className = 'slot'
@@ -198,6 +222,10 @@ function grabtr1() {
             slot2.classList.add('crumpPaper')
             s3fill = true
             s3fType = 6
+        }  else if (tr1.value == 6) {
+            slot2.classList.add('gBottle')
+            s3fill = true
+            s3fType = 7
         }
     } else if (s4fill == false) {
         slot3.className = 'slot'
@@ -225,8 +253,13 @@ function grabtr1() {
             slot3.classList.add('crumpPaper')
             s4fill = true
             s4fType = 6
+        } else if (tr1.value == 6) {
+            slot3.classList.add('gBottle')
+            s4fill = true
+            s4fType = 7
         }
     }
+    tr1.style.opacity = '0'
 }
 
 function grabtr2() {
@@ -260,6 +293,10 @@ function grabtr2() {
             slot0.classList.add('crumpPaper')
             s1fill = true
             s1fType = 6
+        } else if (tr2.value == 6) {
+            slot0.classList.add('gBottle')
+            s1fill = true
+            s1fType = 7
         }
     } else if (s2fill == false) {
         slot1.className = 'slot'
@@ -287,6 +324,10 @@ function grabtr2() {
             slot1.classList.add('crumpPaper')
             s2fill = true
             s2fType = 6
+        } else if (tr2.value == 6) {
+            slot1.classList.add('gBottle')
+            s2fill = true
+            s2fType = 7
         }
     } else if (s3fill == false) {
         slot2.className = 'slot'
@@ -314,6 +355,10 @@ function grabtr2() {
             slot2.classList.add('crumpPaper')
             s3fill = true
             s3fType = 6
+        }  else if (tr2.value == 6) {
+            slot2.classList.add('gBottle')
+            s3fill = true
+            s3fType = 7
         }
     } else if (s4fill == false) {
         slot3.className = 'slot'
@@ -341,8 +386,13 @@ function grabtr2() {
             slot3.classList.add('crumpPaper')
             s4fill = true
             s4fType = 6
+        } else if (tr2.value == 6) {
+            slot3.classList.add('gBottle')
+            s4fill = true
+            s4fType = 7
         }
     }
+    tr2.style.opacity = '0'
     }
 
     function grabtr3() {
@@ -376,6 +426,10 @@ function grabtr2() {
             slot0.classList.add('crumpPaper')
             s1fill = true
             s1fType = 6
+        } else if (tr3.value == 6) {
+            slot0.classList.add('gBottle')
+            s1fill = true
+            s1fType = 7
         }
     } else if (s2fill == false) {
         slot1.className = 'slot'
@@ -403,6 +457,10 @@ function grabtr2() {
             slot1.classList.add('crumpPaper')
             s2fill = true
             s2fType = 6
+        } else if (tr3.value == 6) {
+            slot1.classList.add('gBottle')
+            s2fill = true
+            s2fType = 7
         }
     } else if (s3fill == false) {
         slot2.className = 'slot'
@@ -430,6 +488,10 @@ function grabtr2() {
             slot2.classList.add('crumpPaper')
             s3fill = true
             s3fType = 6
+        } else if (tr3.value == 6) {
+            slot2.classList.add('gBottle')
+            s3fill = true
+            s3fType = 7
         }
     } else if (s4fill == false) {
         slot3.className = 'slot'
@@ -457,8 +519,13 @@ function grabtr2() {
             slot3.classList.add('crumpPaper')
             s4fill = true
             s4fType = 6
+        } else if (tr3.value == 6) {
+            slot3.classList.add('gBottle')
+            s4fill = true
+            s4fType = 7
         }
     }
+    tr3.style.opacity = '0'
     }
 
 function grabtr4() {
@@ -492,6 +559,10 @@ function grabtr4() {
             slot0.classList.add('crumpPaper')
             s1fill = true
             s1fType = 6
+        } else if (tr4.value == 6) {
+            slot0.classList.add('gBottle')
+            s1fill = true
+            s1fType = 7
         }
     } else if (s2fill == false) {
         slot1.className = 'slot'
@@ -519,6 +590,10 @@ function grabtr4() {
             slot1.classList.add('crumpPaper')
             s2fill = true
             s2fType = 6
+        } else if (tr4.value == 6) {
+            slot1.classList.add('gBottle')
+            s2fill = true
+            s2fType = 7
         }
     } else if (s3fill == false) {
         slot2.className = 'slot'
@@ -546,6 +621,10 @@ function grabtr4() {
             slot2.classList.add('crumpPaper')
             s3fill = true
             s3fType = 6
+        } else if (tr4.value == 6) {
+            slot2.classList.add('gBottle')
+            s3fill = true
+            s3fType = 7
         }
     } else if (s4fill == false) {
         slot3.className = 'slot'
@@ -573,8 +652,13 @@ function grabtr4() {
             slot3.classList.add('crumpPaper')
             s4fill = true
             s4fType = 6
+        } else if (tr4.value == 6) {
+            slot3.classList.add('gBottle')
+            s4fill = true
+            s4fType = 7
         }
     }
+    tr4.style.opacity = '0'
 }
 
 function removeSl0() {
