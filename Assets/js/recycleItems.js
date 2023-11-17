@@ -685,15 +685,35 @@ function removeSl3() {
     s4fill = false
 }
 
+function clearSlots() {
+    slot0.className = 'slot'
+    s1fill = false
+    slot1.className = 'slot'
+    s2fill = false
+    slot2.className = 'slot'
+    s3fill = false
+    slot3.className = 'slot'
+    s4fill = false
+}
+
 function createObj() {
     create.className = 'creation'
     if (s1fill && s2fill & s3fill && s4fill) {
         if (s1fType == 5 && s2fType == 5 && s3fType == 1 && s4fType == 6) {
             create.classList.add('ragDoll')
+            clearSlots()
         } else if (s1fType == 3 && s2fType == 5 && s3fType == 3 && s4fType == 5) {
             create.classList.add('telephone')
+            clearSlots()
         } else if (s1fType == 1 && s2fType == 2 && s3fType == 2 && s4fType == 3) {
             create.classList.add('cardboxToy')
+            clearSlots()
+        } else if (s1fType == 7 && s2fType == 5 & s3fType == 5 && s4fType == 6) {
+            create.classList.add('glassVase')
+            clearSlots()
+        } else if (s1fType == 3 && s2fType  == 5 && s3fType == 5 && s4fType == 6) {
+            create.classList.add('tinDrum')
+            clearSlots()
         }
         else {
             alert(`Não há criações para os objetos selecionados`)
@@ -702,6 +722,7 @@ function createObj() {
     else {
         alert(`É necessário preencher todos os slots para criar um objeto`)
     }
+
 }
 
 function opencloseControls() {
