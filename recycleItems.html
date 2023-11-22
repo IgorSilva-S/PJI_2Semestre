@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="lang">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuro em Ação: Criação reciclável</title>
+    <title id="header">Futuro em Ação: Criação reciclável</title>
     <link rel="stylesheet" href="Assets/css/recycleItems.css">
 </head>
 
@@ -22,7 +22,7 @@
         <div class="slot" id="slot3">
             <div class="removeItem" onclick="removeSl3()">&#215;</div>
         </div>
-        <button onclick="createObj()">Criar</button>
+        <button onclick="createObj()"></button>
     </div>
     <div class="conveyor">
         <div class="conveyorTexture">
@@ -45,8 +45,47 @@
             <img src="Assets/img/Arrow.png" alt="">
         </div>
         <button class="closeButton" onclick="location.href = 'index.html'">&#215;</button>
-        <button>&#8635;</button>
-        <button>&#63;</button>
+        <button onclick="location.reload()">&#8635;</button>
+        <button onclick="helpBar()">&#63;</button>
+    </div>
+    <div class="helpBar" game2-helpBar>
+        <div class="titleHelp">
+            <p style="font-size: 50px; cursor: pointer;" onclick="helpBar()">&#215;</p>
+            <p>Lista de Formações disponíveis</p>
+        </div>
+        <div class="tipsBox">
+            <div class="elm rag"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag"></div>
+            <div class="elmT">+</div>
+            <div class="elm paper"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper"></div>
+            <div class="elmT">=</div>
+            <div class="elm ragDoll"></div>
+        </div>
+        <div class="tipsBox">
+            <div class="elm gBottle"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag"></div>
+            <div class="elmT">=</div>
+            <div class="elm glassVase"></div>
+        </div>
+        <div class="tipsBox"></div>
+        <div class="tipsBox"></div>
+        <div class="tipsBox"></div>
+        <div class="tipsBox"></div>
+        <div class="tipsBox"></div>
+        <div class="tipsBox"></div>
+        <div class="tipsBox"></div>
+        <div class="tipsBox"></div>
+        <div class="tipsBox"></div>
+        <div class="tipsBox"></div>
+        <div class="tipsBox"></div>
     </div>
     <script src="Assets/js/recycleItems.js"></script>
 </body>

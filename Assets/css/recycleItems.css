@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -33,7 +35,9 @@
 @keyframes running {
     0% {
         top: 0;
-    } 100% {
+    }
+
+    100% {
         top: -100%;
     }
 }
@@ -61,12 +65,18 @@
 
 .slotItems>button {
     padding: 20px 30px;
+    width: 120px;
+    height: 120px;
     font-size: 20px;
     border-radius: 8px;
     border: 1px solid #0f5f53;
     background-color: #0f5f53;
     color: white;
     transition-duration: .3s;
+    background-size: 80%;
+    background-position: center;
+    background-image: url(../img/GamesImage/RecycleItems/createButton.png);
+    background-repeat: no-repeat;
 }
 
 .slotItems>button:hover {
@@ -112,7 +122,9 @@
 @keyframes slideTrash {
     0% {
         top: calc(100% + 130px)
-    } to {
+    }
+
+    to {
         top: -130px
     }
 }
@@ -166,7 +178,7 @@
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../img/GamesImage/RecycleItems/glassBottle.png);  
+    background-image: url(../img/GamesImage/RecycleItems/glassBottle.png);
 }
 
 .controls {
@@ -282,4 +294,102 @@
 
 .tinDrum {
     background-image: url(../img/GamesImage/RecycleItems/RecycledItems/TinDrum.png);
+}
+
+.puppet {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/Puppet.png);
+}
+
+.plasticRocket {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/PlasticRocket.png);
+}
+
+.mirror {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/mirror.png);
+}
+
+.toy1 {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/toy1.png);
+}
+
+.stilt {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/Stilt.png);
+}
+
+.toy2 {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/toy2.png);
+}
+
+.glassBlack {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/GlassBlackboard.png);
+}
+
+.cardboardTv {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/cardboardTv.png);
+}
+
+.helpBar {
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    right: -31%;
+    top: 0;
+    background-color: #0f5f5399;
+    backdrop-filter: blur(50px);
+    z-index: 1001;
+    transition-duration: .3s;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 80px;
+}
+
+.hBarOpen {
+    right: 0
+}
+
+.helpBar>.titleHelp {
+    width: 90%;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Playpen Sans', cursive;
+    color: white;
+}
+
+.helpBar>.tipsBox {
+    width: 90%;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15px auto;
+}
+
+.helpBar>.tipsBox>.elm {
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.helpBar>.tipsBox>.elmT {
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: white;
 }

@@ -8,6 +8,20 @@ let s3fill = false
 let s4fill = false
 let s1fType, s2fType, s3fType, s4fType
 const create = document.querySelector('[game2-creation]')
+let phrase = 'Não há criações para os objetos selecionados'
+let alertPh = 'É necessário preencher todos os slots para criar um objeto'
+let header = 'Futuro em Ação: Criação reciclável'
+let enStyle = localStorage.getItem('English')
+let lang = 'pt-br'
+const hBar = document.querySelector('[game2-helpBar]')
+if (enStyle == 1) {
+    phrase = 'There are no creations for the selected objects'
+    header = 'Future in Action: Recyclable Creation'
+    alertPh = 'All slots must be filled to create an object'
+    lang = 'en'
+    document.getElementById('header').innerText = header
+    document.getElementById('lang').lang = lang
+}
 /*Tipo de lixo - definição:
 0 - Papel ou não definido;
 1 - Plastico;
@@ -717,36 +731,80 @@ function createObj() {
             if ((v1 == 5 || v1 == 1 || v1 == 6) && (v2 == 5 || v2 == 1 || v2 == 6) && (v3 == 5 || v3 == 1 || v3 == 6) && (v4 == 5 || v4 == 1 || v4 == 6)) {
                 create.classList.add('ragDoll')
                 clearSlots()
+            } else if ((v1 == 5 || v1 == 2) && (v2 == 5 || v2 == 2) && (v3 == 5 || v3 == 2) && (v4 == 5 || v4 == 2)) {
+                create.classList.add('puppet')
+                clearSlots()
+            } else if ((v1 == 4 || v1 == 1 || v1 == 6) && (v2 == 4 || v2 == 1 || v2 == 6) && (v3 == 4 || v3 == 1 || v3 == 6) && (v4 == 4 || v4 == 1 || v4 == 6)) {
+                create.classList.add('mirror')
+                clearSlots()
             } else {
-                alert(`Não há criações para os objetos selecionados`)
+                alert(phrase)
             }
         } else if (resultTypes == 16) {
             if ((v1 == 5 || v1 == 3) && (v2 == 5 || v2 == 3) && (v3 == 5 || v3 == 3) && (v4 == 5 || v4 == 3)) {
                 create.classList.add('telephone')
                 clearSlots()
             } else {
-                alert(`Não há criações para os objetos selecionados`)
+                alert(phrase)
             }
         } else if (resultTypes == 8) {
             if ((v1 == 3 || v1 == 2 || v1 == 1) && (v2 == 3 || v2 == 2 || v2 == 1) && (v3 == 3 || v3 == 2 || v3 == 1) && (v4 == 3 || v4 == 2 || v4 == 1)) {
                 create.classList.add('cardboxToy')
                 clearSlots()
             } else {
-                alert(`Não há criações para os objetos selecionados`)
+                alert(phrase)
             }
         } else if (resultTypes == 23) {
             if ((v1 == 5 || v1 == 6 || v1 == 7) && (v2 == 5 || v2 == 6 || v2 == 7) && (v3 == 5 || v3 == 6 || v3 == 7) && (v4 == 5 || v4 == 6 || v4 == 7)) {
                 create.classList.add('glassVase')
                 clearSlots()
             } else {
-                alert(`Não há criações para os objetos selecionados`)
+                alert(phrase)
             }
         } else if (resultTypes == 19) {
             if ((v1 == 3 || v1 == 5 || v1 == 6) && (v2 == 3 || v2 == 5 || v2 == 6) && (v3 == 3 || v3 == 5 || v3 == 6) && (v4 == 3 || v4 == 5 || v4 == 6)) {
                 create.classList.add('tinDrum')
                 clearSlots()
+            } else if ((v1 == 2 || v1 == 5 || v1 == 6) && (v2 == 2 || v2 == 5 || v2 == 6) && (v3 == 2 || v3 == 5 || v3 == 6) && (v4 == 2 || v4 == 5 || v4 == 6)){
+                create.classList.add('toy1')
+                clearSlots()
             } else {
-                alert(`Não há criações para os objetos selecionados`)
+                alert(phrase)
+            }
+        } else if (resultTypes == 5) {
+            if ((v1 == 1 || v1 == 2) && (v2 == 1 || v2 == 2) && (v3 == 1 || v3 == 2) && (v4 == 1 || v4 == 2)) {
+                create.classList.add('plasticRocket')
+                clearSlots()
+            } else {
+                alert(phrase)
+            }
+        } else if (resultTypes == 13) {
+            if ((v1 == 2 || v1 == 3 || v1 == 5) && (v2 == 2 || v2 == 3 || v2 == 5) && (v3 == 2 || v3 == 3 || v3 == 5) && (v4 == 2 || v4 == 3 || v4 == 5)) {
+                create.classList.add('stilt')
+                clearSlots()
+            } else {
+                alert(phrase)
+            }
+        } else if (resultTypes == 14) {
+            if ((v1 == 2 || v1 == 5) && (v2 == 2 || v2 == 5) && (v3 == 2 || v3 == 5) && (v4 == 2 || v4 == 5)) {
+                create.classList.add('toy2')
+                clearSlots()
+            } else {
+                alert(phrase)
+            }
+        } else if (resultTypes == 15) {
+            if ((v1 == 4 || v1 == 1 || v1 == 6) && (v2 == 4 || v2 == 1 || v2 == 6) && (v3 == 4 || v3 == 1 || v3 == 6) && (v4 == 4 || v4 == 1 || v4 == 6)) {
+                create.classList.add('glassBlack')
+                clearSlots()
+            } else {
+                alert(phrase)
+            }
+        } else if (resultTypes == 11) {
+            if ((v1 == 1 || v1 == 2 || v1 == 6) && (v2 == 1 || v2 == 2 || v2 == 6) && (v3 == 1 || v3 == 2 || v3 == 6) && (v4 == 1 || v4 == 2 || v4 == 6)) {
+                create.classList.add('cardboardTv')
+                clearSlots()
+            } else {
+                alert(phrase)
             }
         }
         /*if (s1fType == 5 && s2fType == 5 && s3fType == 1 && s4fType == 6) {
@@ -766,11 +824,11 @@ function createObj() {
             clearSlots()
         }*/
         else {
-            alert(`Não há criações para os objetos selecionados`)
+            alert(phrase)
         }
     }
     else {
-        alert(`É necessário preencher todos os slots para criar um objeto`)
+        alert(alertPh)
     }
 
 }
@@ -778,4 +836,8 @@ function createObj() {
 function opencloseControls() {
     let controls = document.querySelector('.controls')
     controls.classList.toggle('opened')
+}
+
+function helpBar() {
+    hBar.classList.toggle('hBarOpen')
 }
