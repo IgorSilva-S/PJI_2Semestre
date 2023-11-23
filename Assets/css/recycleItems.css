@@ -402,3 +402,10 @@
     font-family: 'Playpen Sans', cursive;
     color: white;
 }
+
+.pauseB {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/GamesImage/RecycleItems/PauseB.png);
+    display: none;
+}

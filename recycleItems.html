@@ -28,10 +28,10 @@
         <div class="conveyorTexture">
 
         </div>
-        <div class="trashs" id="tr1" onclick="grabtr1()"></div>
-        <div class="trashs t2" id="tr2" onclick="grabtr2()"></div>
-        <div class="trashs t3" id="tr3" onclick="grabtr3()"></div>
-        <div class="trashs t4" id="tr4" onclick="grabtr4()"></div>
+        <div class="trashs" id="tr1" onclick="grabtr1()" oncontextmenu="changeValue1(event)"></div>
+        <div class="trashs t2" id="tr2" onclick="grabtr2()" oncontextmenu="changeValue2(event)"></div>
+        <div class="trashs t3" id="tr3" onclick="grabtr3()" oncontextmenu="changeValue3(event)"></div>
+        <div class="trashs t4" id="tr4" onclick="grabtr4()" oncontextmenu="changeValue4(event)"></div>
     </div>
     <div class="tableCont">
         <div class="table">
@@ -44,9 +44,10 @@
         <div class="openandcloseControls" onclick="opencloseControls()">
             <img src="Assets/img/Arrow.png" alt="">
         </div>
-        <button class="closeButton" onclick="location.href = 'index.html'">&#215;</button>
+        <button class="closeButton" onclick="returnToSite()">&#215;</button>
         <button onclick="location.reload()">&#8635;</button>
         <button onclick="helpBar()">&#63;</button>
+        <button class="pauseB" style="display: none;" onclick="pauseGame()"></button>
     </div>
     <div class="helpBar" game2-helpBar>
         <div class="titleHelp">
@@ -76,7 +77,7 @@
             <div class="elmT">+</div>
             <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm glassVase"></div>
+            <div class="elm glassVase" oncontextmenu="viewGVaseValue(event)"></div>
         </div>
         <div class="tipsBox" id="gBlack">
             <div class="elm glass" oncontextmenu="viewGlassPaneValue(event)"></div>
@@ -87,7 +88,7 @@
             <div class="elmT">+</div>
             <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm glassBlack"></div>
+            <div class="elm glassBlack" oncontextmenu="viewGBlackValue(event)"></div>
         </div>
         <div class="tipsBox" id="mirror">
             <div class="elm glass" oncontextmenu="viewGlassPaneValue(event)"></div>
@@ -98,7 +99,7 @@
             <div class="elmT">+</div>
             <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm mirror"></div>
+            <div class="elm mirror" oncontextmenu="viewMirrorValue(event)"></div>
         </div>
         <div class="tipsBox" id="cbToy">
             <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
@@ -109,7 +110,7 @@
             <div class="elmT">+</div>
             <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm cardboxToy"></div>
+            <div class="elm cardboxToy" oncontextmenu="viewCBToyValue(event)"></div>
         </div>
         <div class="tipsBox" id="puppet">
             <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
@@ -120,7 +121,7 @@
             <div class="elmT">+</div>
             <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm puppet"></div>
+            <div class="elm puppet" oncontextmenu="viewPuppetValue(event)"></div>
         </div>
         <div class="tipsBox" id="cbTv">
             <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
@@ -131,7 +132,7 @@
             <div class="elmT">+</div>
             <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm cardboardTv"></div>
+            <div class="elm cardboardTv" oncontextmenu="viewCBTvValue(event)"></div>
         </div>
         <div class="tipsBox" id="tel">
             <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
@@ -142,7 +143,7 @@
             <div class="elmT">+</div>
             <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm telephone"></div>
+            <div class="elm telephone" oncontextmenu="viewTelValue(event)"></div>
         </div>
         <div class="tipsBox" id="t2">
             <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
@@ -153,7 +154,7 @@
             <div class="elmT">+</div>
             <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm toy2"></div>
+            <div class="elm toy2" oncontextmenu="viewT2Value(event)"></div>
         </div>
         <div class="tipsBox" id="t1">
             <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
@@ -164,7 +165,7 @@
             <div class="elmT">+</div>
             <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm toy1"></div>
+            <div class="elm toy1" oncontextmenu="viewT1Value(event)"></div>
         </div>
         <div class="tipsBox" id="pRocket">
             <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
@@ -175,7 +176,7 @@
             <div class="elmT">+</div>
             <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm plasticRocket"></div>
+            <div class="elm plasticRocket" oncontextmenu="viewPRocketValue(event)"></div>
         </div>
         <div class="tipsBox" id="tDrum">
             <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
@@ -186,7 +187,7 @@
             <div class="elmT">+</div>
             <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm tinDrum"></div>
+            <div class="elm tinDrum" oncontextmenu="viewTDrumValue(event)"></div>
         </div>
         <div class="tipsBox" id="stilt">
             <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
@@ -197,7 +198,7 @@
             <div class="elmT">+</div>
             <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
             <div class="elmT">=</div>
-            <div class="elm stilt"></div>
+            <div class="elm stilt" oncontextmenu="viewStiltValue(event)"></div>
         </div>
 
     </div>

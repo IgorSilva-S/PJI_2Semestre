@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -195,4 +197,115 @@ body {
 100% {
     left: 0;
 }
+}
+
+.controls {
+    width: 25%;
+    height: 20%;
+    position: fixed;
+    right: -25%;
+    bottom: 30px;
+    border-radius: 8px;
+    background-color: #0f5f5399;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .3s;
+}
+
+.opened {
+    right: 30px;
+}
+
+.opened>.openandcloseControls>img {
+    rotate: 180deg;
+}
+
+.openandcloseControls {
+    width: 10%;
+    height: 60px;
+    position: absolute;
+    left: -10%;
+    top: calc(50% - 30px);
+    border-radius: 120px 0 0 120px;
+    background-color: #0f5f5399;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.openandcloseControls>img {
+    width: 40px;
+    height: 40px;
+}
+
+.controls>button {
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+    background-color: transparent;
+    border-radius: 4px;
+    transition-duration: .3s;
+    border: none;
+    color: white;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls>button:hover {
+    background-color: #f0f0f099;
+}
+
+.controls>.closeButton {
+    font-size: 120px;
+}
+
+.rBar {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    right: -30%;
+    transition-duration: .3s;
+    top: 0;
+    background-color: #0f5f5399;
+    backdrop-filter: blur(20px);
+    z-index: 1001;
+    color: white;
+    font-family: 'Playpen Sans', cursive;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.rBar button {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 50px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    transition-duration: .3s;
+}
+
+.rBar button:hover {
+    background-color: rgba(255,255,255,0.7);
+}
+
+.rBar h1 {
+    margin-bottom: 20px;
+}
+
+.rBar p {
+    text-align: justify;
+}
+
+.hBarOpen {
+    right: 0%;
 }

@@ -20,6 +20,11 @@ let enStyle = localStorage.getItem('English')
 let lang = 'pt-br'
 const hBar = document.querySelector('[game2-helpBar]')
 const hbarPhrase = document.querySelector('.alertBox')
+let paused = false
+let grabbed1 = false
+let grabbed2 = false
+let grabbed3 = false
+let grabbed4 = false
 
 //Items
 const rDoll = document.getElementById('rDoll')
@@ -49,19 +54,6 @@ if (enStyle == 1) {
     comboDEV = "DEV Mode"
 }
 
-function updatePhrase() {
-    if (rDoll.value == 0 && gVase.value == 0 && gBlack.value == 0 && mirror.value == 0 && cbToy == 0 && puppet.value == 0 && cbTv.value == 0 && tel.value == 0 && t1.value == 0 && t2.value == 0 && pRocket.value == 0 && tDrum.value == 0 && stilt.value == 0) {
-        hbarPhrase.innerText = comboPhraseNone
-    } else if (rDoll.value == 1 || gVase.value == 1 || gBlack.value == 1 || mirror.value == 1 || cbToy == 1 || puppet.value == 1 || cbTv.value == 1 || tel.value == 1 || t1.value == 1 || t2.value == 1 || pRocket.value == 1 || tDrum.value == 1 || stilt.value == 1) {
-        hbarPhrase.innerText = comboPhraseNComplete
-    } else if (rDoll.value == 1 && gVase.value == 1 && gBlack.value == 1 && mirror.value == 1 && cbToy == 1 && puppet.value == 1 && cbTv.value == 1 && tel.value == 1 && t1.value == 1 && t2.value == 1 && pRocket.value == 1 && tDrum.value == 1 && stilt.value == 1) {
-        hbarPhrase.innerText = comboPhraseComplete
-    } else if (DEVMode) {
-        hbarPhrase.innerText = comboDEV
-    } else {
-        hbarPhrase.innerText = comboPhraseNone
-    }
-}
 /*Tipo de lixo - definição:
 0 - Papel ou não definido;
 1 - Plastico;
@@ -97,6 +89,7 @@ tr1.addEventListener('animationiteration', () => {
         tr1.value = 6
     }
     tr1.removeAttribute('style')
+    grabbed1 = false
 })
 
 tr2.addEventListener('animationiteration', () => {
@@ -125,6 +118,7 @@ tr2.addEventListener('animationiteration', () => {
         tr2.value = 6
     }
     tr2.removeAttribute('style')
+    grabbed2 = false
 })
 
 tr3.addEventListener('animationiteration', () => {
@@ -153,6 +147,7 @@ tr3.addEventListener('animationiteration', () => {
         tr3.value = 6
     }
     tr3.removeAttribute('style')
+    grabbed3 = false
 })
 
 tr4.addEventListener('animationiteration', () => {
@@ -181,6 +176,7 @@ tr4.addEventListener('animationiteration', () => {
         tr4.value = 6
     }
     tr4.removeAttribute('style')
+    grabbed4 = false
 })
 
 // Grab trashes
@@ -189,6 +185,7 @@ function grabtr1() {
     let slot1 = document.getElementById('slot1')
     let slot2 = document.getElementById('slot2')
     let slot3 = document.getElementById('slot3')
+    if (!grabbed1) {
     if (s1fill == false) {
         slot0.className = 'slot'
         if (tr1.value == 0) {
@@ -314,7 +311,11 @@ function grabtr1() {
             s4fType = 7
         }
     }
+}
+    if (!DEVMode) {
     tr1.style.opacity = '0'
+    grabbed1 = true
+    }
 }
 
 function grabtr2() {
@@ -322,6 +323,7 @@ function grabtr2() {
     let slot1 = document.getElementById('slot1')
     let slot2 = document.getElementById('slot2')
     let slot3 = document.getElementById('slot3')
+    if (!grabbed2) {
     if (s1fill == false) {
         slot0.className = 'slot'
         if (tr2.value == 0) {
@@ -447,7 +449,11 @@ function grabtr2() {
             s4fType = 7
         }
     }
+}
+    if (!DEVMode) {
     tr2.style.opacity = '0'
+    grabbed2 = true
+    }
 }
 
 function grabtr3() {
@@ -455,6 +461,7 @@ function grabtr3() {
     let slot1 = document.getElementById('slot1')
     let slot2 = document.getElementById('slot2')
     let slot3 = document.getElementById('slot3')
+    if (!grabbed3) {
     if (s1fill == false) {
         slot0.className = 'slot'
         if (tr3.value == 0) {
@@ -580,7 +587,11 @@ function grabtr3() {
             s4fType = 7
         }
     }
+}
+    if (!DEVMode) {
     tr3.style.opacity = '0'
+    grabbed3 = true
+    }
 }
 
 function grabtr4() {
@@ -588,6 +599,7 @@ function grabtr4() {
     let slot1 = document.getElementById('slot1')
     let slot2 = document.getElementById('slot2')
     let slot3 = document.getElementById('slot3')
+    if (!grabbed4) {
     if (s1fill == false) {
         slot0.className = 'slot'
         if (tr4.value == 0) {
@@ -713,7 +725,11 @@ function grabtr4() {
             s4fType = 7
         }
     }
+}
+    if (!DEVMode) {
     tr4.style.opacity = '0'
+    grabbed4 = true
+    }
 }
 
 function removeSl0() {
@@ -900,7 +916,6 @@ function createObj() {
     else {
         alert(alertPh)
     }
-    updatePhrase()
 }
 
 function opencloseControls() {
@@ -927,7 +942,28 @@ function G2DEVMode() {
     tDrum.style.display = 'flex'
     stilt.style.display = 'flex'
     DEVMode = true
-    updatePhrase()
+    hbarPhrase.innerText = comboDEV
+    document.querySelector('.pauseB').style.display = 'flex'
+}
+
+function removeDEVMode() {
+    hbarPhrase.innerText = ''
+    document.querySelector('.pauseB').style.display = 'none'
+    pauseGame()
+    rDoll.style.display = 'none'
+    gVase.style.display = 'none'
+    gBlack.style.display = 'none'
+    mirror.style.display = 'none'
+    cbToy.style.display = 'none'
+    puppet.style.display = 'none'
+    cbTv.style.display = 'none'
+    tel.style.display = 'none'
+    t2.style.display = 'none'
+    t1.style.display = 'none'
+    pRocket.style.display = 'none'
+    tDrum.style.display = 'none'
+    stilt.style.display = 'none'
+    DEVMode = false
 }
 
 //Verificar valores no site com DEV Mode
@@ -1017,5 +1053,299 @@ function viewRDollValue(event) {
         } else {
             alert('O Valor da soma para se criar a Boneca de Pano é: 17')
         }
+    }
+}
+
+function viewGVaseValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Glass Vase is: 23')
+        } else {
+            alert('O Valor da soma para se criar o vaso de vidro é: 23')
+        }
+    }
+}
+
+function viewGBlackValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Glass Blackboard is: 15')
+        } else {
+            alert('O Valor da soma para se criar a Lousa de Vidro é: 15')
+        }
+    }
+}
+
+function viewMirrorValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Mirror is: 17')
+        } else {
+            alert('O Valor da soma para se criar o Espelho é: 17')
+        }
+    }
+}
+
+function viewCBToyValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Cardbox Toy is: 8')
+        } else {
+            alert('O Valor da soma para se criar o Brinquedo de Papelão é: 8')
+        }
+    }
+}
+
+function viewPuppetValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Puppet is: 17')
+        } else {
+            alert('O Valor da soma para se criar o fantosche é: 17')
+        }
+    }
+}
+
+function viewCBTvValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Cardbox TV is: 11')
+        } else {
+            alert('O Valor da soma para se criar a TV de papelão é: 11')
+        }
+    }
+}
+
+function viewTelValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Telephone is: 16')
+        } else {
+            alert('O Valor da soma para se criar o Telefone é: 16')
+        }
+    }
+}
+
+function viewT2Value(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Toy 2 is: 14')
+        } else {
+            alert('O Valor da soma para se criar o Brinquedo nº 2 é: 14')
+        }
+    }
+}
+
+function viewT1Value(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Toy 1 is: 19')
+        } else {
+            alert('O Valor da soma para se criar o Brinquedo nº 1 é: 19')
+        }
+    }
+}
+
+function viewPRocketValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Plastic Rocket is: 5')
+        } else {
+            alert('O Valor da soma para se criar o Foguete de Plástico é: 5')
+        }
+    }
+}
+
+function viewTDrumValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Tin Drum is: 19')
+        } else {
+            alert('O Valor da soma para se criar o Tambor de Metal é: 19')
+        }
+    }
+}
+
+function viewStiltValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Stilt is: 13')
+        } else {
+            alert('O Valor da soma para se criar o Pé de Lata é: 13')
+        }
+    }
+}
+
+function pauseGame() {
+    if (DEVMode) {
+        if (!paused) {
+        tr1.style.animationPlayState = 'paused'
+        tr2.style.animationPlayState = 'paused'
+        tr3.style.animationPlayState = 'paused'
+        tr4.style.animationPlayState = 'paused'
+        document.querySelector('.conveyorTexture').style.animationPlayState = 'paused'
+        paused = true
+        } else {
+            tr1.removeAttribute('style')
+            tr2.removeAttribute('style')
+            tr3.removeAttribute('style')
+            tr4.removeAttribute('style')
+            document.querySelector('.conveyorTexture').removeAttribute('style')
+            paused = false
+        }
+    } else {
+        alert(`Ative Modo de Desenvolvedor`)
+    }
+}
+
+function changeValue1(event) {
+    if (DEVMode) {
+        event.preventDefault() 
+        let newValue = prompt(`Digite o novo valor para o 1º Elemento (0 até 6)`)
+        newValue = parseInt(newValue)
+        tr1.className = 'trashs'
+        if (newValue == 0) {
+            tr1.classList.add('paper')
+            tr1.value = 0
+        } else if (newValue == 1) {
+            tr1.classList.add('plastic')
+            tr1.value = 1
+        } else if (newValue == 2) {
+            tr1.classList.add('metal')
+            tr1.value = 2
+        } else if (newValue == 3) {
+            tr1.classList.add('glass')
+            tr1.value = 3
+        } else if (newValue == 4) {
+            tr1.classList.add('rag')
+            tr1.value = 4
+        } else if (newValue == 5) {
+            tr1.classList.add('crumpPaper')
+            tr1.value = 5
+        } else if (newValue == 6) {
+            tr1.classList.add('gBottle')
+            tr1.value = 6
+        } else {
+            alert("Valor não se encaixa. Veja os valores na lista de criações")
+        }
+    }
+}
+
+function changeValue2(event) {
+    if (DEVMode) {
+        event.preventDefault() 
+        let newValue = prompt(`Digite o novo valor para o 2º Elemento (0 até 6)`)
+        newValue = parseInt(newValue)
+        tr2.className = 'trashs t2'
+        if (newValue == 0) {
+            tr2.classList.add('paper')
+            tr2.value = 0
+        } else if (newValue == 1) {
+            tr2.classList.add('plastic')
+            tr2.value = 1
+        } else if (newValue == 2) {
+            tr2.classList.add('metal')
+            tr2.value = 2
+        } else if (newValue == 3) {
+            tr2.classList.add('glass')
+            tr2.value = 3
+        } else if (newValue == 4) {
+            tr2.classList.add('rag')
+            tr2.value = 4
+        } else if (newValue == 5) {
+            tr2.classList.add('crumpPaper')
+            tr2.value = 5
+        } else if (newValue == 6) {
+            tr2.classList.add('gBottle')
+            tr2.value = 6
+        } else {
+            alert("Valor não se encaixa. Veja os valores na lista de criações")
+        }
+    }
+}
+
+function changeValue3(event) {
+    if (DEVMode) {
+        event.preventDefault() 
+        let newValue = prompt(`Digite o novo valor para o 3º Elemento (0 até 6)`)
+        newValue = parseInt(newValue)
+        tr3.className = 'trashs t3'
+        if (newValue == 0) {
+            tr3.classList.add('paper')
+            tr3.value = 0
+        } else if (newValue == 1) {
+            tr3.classList.add('plastic')
+            tr3.value = 1
+        } else if (newValue == 2) {
+            tr3.classList.add('metal')
+            tr3.value = 2
+        } else if (newValue == 3) {
+            tr3.classList.add('glass')
+            tr3.value = 3
+        } else if (newValue == 4) {
+            tr3.classList.add('rag')
+            tr3.value = 4
+        } else if (newValue == 5) {
+            tr3.classList.add('crumpPaper')
+            tr3.value = 5
+        } else if (newValue == 6) {
+            tr3.classList.add('gBottle')
+            tr3.value = 6
+        } else {
+            alert("Valor não se encaixa. Veja os valores na lista de criações")
+        }
+    }
+}
+
+function changeValue4(event) {
+    if (DEVMode) {
+        event.preventDefault() 
+        let newValue = prompt(`Digite o novo valor para o 4º Elemento (0 até 6)`)
+        newValue = parseInt(newValue)
+        tr4.className = 'trashs t4'
+        if (newValue == 0) {
+            tr4.classList.add('paper')
+            tr4.value = 0
+        } else if (newValue == 1) {
+            tr4.classList.add('plastic')
+            tr4.value = 1
+        } else if (newValue == 2) {
+            tr4.classList.add('metal')
+            tr4.value = 2
+        } else if (newValue == 3) {
+            tr4.classList.add('glass')
+            tr4.value = 3
+        } else if (newValue == 4) {
+            tr4.classList.add('rag')
+            tr4.value = 4
+        } else if (newValue == 5) {
+            tr4.classList.add('crumpPaper')
+            tr4.value = 5
+        } else if (newValue == 6) {
+            tr4.classList.add('gBottle')
+            tr4.value = 6
+        } else {
+            alert("Valor não se encaixa. Veja os valores na lista de criações")
+        }
+    }
+}
+
+function returnToSite() {
+    if (enStyle == 1) {
+        location.href = 'doItYourselfEnUs.html'
+    } else {
+        location.href = 'cuideVcMsm.html'
     }
 }

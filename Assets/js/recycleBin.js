@@ -11,6 +11,7 @@ const pointerView = document.getElementById('points')
 let trash = document.getElementById('trash')
 let leftPosi, topPosi = 0
 let grabbed = false
+const hBar = document.querySelector('.rBar')
 
 changeTrash()
 
@@ -120,4 +121,13 @@ function organicPicker() {
     viewer.className = 'viewer'
     changeTrash()
 }
+}
+
+function opencloseControls() {
+    let controls = document.querySelector('.controls')
+    controls.classList.toggle('opened')
+}
+
+function helpBar() {
+    hBar.classList.toggle('hBarOpen')
 }
