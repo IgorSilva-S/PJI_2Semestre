@@ -329,10 +329,10 @@
 }
 
 .helpBar {
-    width: 30%;
+    width: 40%;
     height: 100%;
     position: fixed;
-    right: -31%;
+    right: -41%;
     top: 0;
     background-color: #0f5f5399;
     backdrop-filter: blur(50px);
@@ -364,7 +364,7 @@
 .helpBar>.tipsBox {
     width: 90%;
     height: 300px;
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     align-items: center;
     margin: 15px auto;
@@ -391,5 +391,14 @@
     align-items: center;
     width: 50px;
     height: 50px;
+    color: white;
+}
+
+.helpBar>.alertBox {
+    width: 90%;
+    font-size: 30px;
+    margin: 0 5%;
+    text-align: center;
+    font-family: 'Playpen Sans', cursive;
     color: white;
 }

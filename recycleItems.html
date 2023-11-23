@@ -53,39 +53,153 @@
             <p style="font-size: 50px; cursor: pointer;" onclick="helpBar()">&#215;</p>
             <p>Lista de Formações disponíveis</p>
         </div>
-        <div class="tipsBox">
-            <div class="elm rag"></div>
-            <div class="elmT">+</div>
-            <div class="elm rag"></div>
-            <div class="elmT">+</div>
-            <div class="elm paper"></div>
-            <div class="elmT">+</div>
-            <div class="elm crumpPaper"></div>
-            <div class="elmT">=</div>
-            <div class="elm ragDoll"></div>
+        <div class="alertBox">
+
         </div>
-        <div class="tipsBox">
-            <div class="elm gBottle"></div>
+        <div class="tipsBox" id="rDoll">
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
             <div class="elmT">+</div>
-            <div class="elm crumpPaper"></div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
             <div class="elmT">+</div>
-            <div class="elm crumpPaper"></div>
+            <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
             <div class="elmT">+</div>
-            <div class="elm rag"></div>
+            <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm ragDoll" oncontextmenu="viewRDollValue(event)"></div>
+        </div>
+        <div class="tipsBox" id="gVase">
+            <div class="elm gBottle" oncontextmenu="viewGlassBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
             <div class="elmT">=</div>
             <div class="elm glassVase"></div>
         </div>
-        <div class="tipsBox"></div>
-        <div class="tipsBox"></div>
-        <div class="tipsBox"></div>
-        <div class="tipsBox"></div>
-        <div class="tipsBox"></div>
-        <div class="tipsBox"></div>
-        <div class="tipsBox"></div>
-        <div class="tipsBox"></div>
-        <div class="tipsBox"></div>
-        <div class="tipsBox"></div>
-        <div class="tipsBox"></div>
+        <div class="tipsBox" id="gBlack">
+            <div class="elm glass" oncontextmenu="viewGlassPaneValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm glass" oncontextmenu="viewGlassPaneValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm glassBlack"></div>
+        </div>
+        <div class="tipsBox" id="mirror">
+            <div class="elm glass" oncontextmenu="viewGlassPaneValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm mirror"></div>
+        </div>
+        <div class="tipsBox" id="cbToy">
+            <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm plastic" oncontextmenu="viewPlasticBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm plastic" oncontextmenu="viewPlasticBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm cardboxToy"></div>
+        </div>
+        <div class="tipsBox" id="puppet">
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm plastic" oncontextmenu="viewPlasticBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm puppet"></div>
+        </div>
+        <div class="tipsBox" id="cbTv">
+            <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm plastic" oncontextmenu="viewPlasticBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm plastic" oncontextmenu="viewPlasticBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm cardboardTv"></div>
+        </div>
+        <div class="tipsBox" id="tel">
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm telephone"></div>
+        </div>
+        <div class="tipsBox" id="t2">
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm plastic" oncontextmenu="viewPlasticBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm plastic" oncontextmenu="viewPlasticBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm toy2"></div>
+        </div>
+        <div class="tipsBox" id="t1">
+            <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm plastic" oncontextmenu="viewPlasticBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm toy1"></div>
+        </div>
+        <div class="tipsBox" id="pRocket">
+            <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm plastic" oncontextmenu="viewPlasticBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm plasticRocket"></div>
+        </div>
+        <div class="tipsBox" id="tDrum">
+            <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm tinDrum"></div>
+        </div>
+        <div class="tipsBox" id="stilt">
+            <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm plastic" oncontextmenu="viewPlasticBottleValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm rag" oncontextmenu="viewRagValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm stilt"></div>
+        </div>
+
     </div>
     <script src="Assets/js/recycleItems.js"></script>
 </body>

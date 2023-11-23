@@ -11,9 +11,31 @@ const create = document.querySelector('[game2-creation]')
 let phrase = 'Não há criações para os objetos selecionados'
 let alertPh = 'É necessário preencher todos os slots para criar um objeto'
 let header = 'Futuro em Ação: Criação reciclável'
+let comboPhraseNone = 'Não tem combinações salvas, continue criando para descobrir novas criações'
+let comboPhraseNComplete = 'Ainda tem outras combinações, continue criando!'
+let comboPhraseComplete = 'Você achou todas as combinações disponíveis! Parabéns!'
+let comboDEV = 'Modo de desenvolvedor'
+let DEVMode = false
 let enStyle = localStorage.getItem('English')
 let lang = 'pt-br'
 const hBar = document.querySelector('[game2-helpBar]')
+const hbarPhrase = document.querySelector('.alertBox')
+
+//Items
+const rDoll = document.getElementById('rDoll')
+const gVase = document.getElementById('gVase')
+const gBlack = document.getElementById('gBlack')
+const mirror = document.getElementById('mirror')
+const cbToy = document.getElementById('cbToy')
+const puppet = document.getElementById('puppet')
+const cbTv = document.getElementById('cbTv')
+const tel = document.getElementById('tel')
+const t2 = document.getElementById('t2')
+const t1 = document.getElementById('t1')
+const pRocket = document.getElementById('pRocket')
+const tDrum = document.getElementById('tDrum')
+const stilt = document.getElementById('stilt')
+
 if (enStyle == 1) {
     phrase = 'There are no creations for the selected objects'
     header = 'Future in Action: Recyclable Creation'
@@ -21,6 +43,24 @@ if (enStyle == 1) {
     lang = 'en'
     document.getElementById('header').innerText = header
     document.getElementById('lang').lang = lang
+    comboPhraseNone = "You don't have any saved combinations, keep creating to discover new creations"
+    comboPhraseNComplete = "There are still other combinations, keep creating!"
+    comboPhraseComplete = "You found all the available combinations! Congratulations!"
+    comboDEV = "DEV Mode"
+}
+
+function updatePhrase() {
+    if (rDoll.value == 0 && gVase.value == 0 && gBlack.value == 0 && mirror.value == 0 && cbToy == 0 && puppet.value == 0 && cbTv.value == 0 && tel.value == 0 && t1.value == 0 && t2.value == 0 && pRocket.value == 0 && tDrum.value == 0 && stilt.value == 0) {
+        hbarPhrase.innerText = comboPhraseNone
+    } else if (rDoll.value == 1 || gVase.value == 1 || gBlack.value == 1 || mirror.value == 1 || cbToy == 1 || puppet.value == 1 || cbTv.value == 1 || tel.value == 1 || t1.value == 1 || t2.value == 1 || pRocket.value == 1 || tDrum.value == 1 || stilt.value == 1) {
+        hbarPhrase.innerText = comboPhraseNComplete
+    } else if (rDoll.value == 1 && gVase.value == 1 && gBlack.value == 1 && mirror.value == 1 && cbToy == 1 && puppet.value == 1 && cbTv.value == 1 && tel.value == 1 && t1.value == 1 && t2.value == 1 && pRocket.value == 1 && tDrum.value == 1 && stilt.value == 1) {
+        hbarPhrase.innerText = comboPhraseComplete
+    } else if (DEVMode) {
+        hbarPhrase.innerText = comboDEV
+    } else {
+        hbarPhrase.innerText = comboPhraseNone
+    }
 }
 /*Tipo de lixo - definição:
 0 - Papel ou não definido;
@@ -731,12 +771,18 @@ function createObj() {
             if ((v1 == 5 || v1 == 1 || v1 == 6) && (v2 == 5 || v2 == 1 || v2 == 6) && (v3 == 5 || v3 == 1 || v3 == 6) && (v4 == 5 || v4 == 1 || v4 == 6)) {
                 create.classList.add('ragDoll')
                 clearSlots()
+                rDoll.value = 1
+                rDoll.style.display = 'flex'
             } else if ((v1 == 5 || v1 == 2) && (v2 == 5 || v2 == 2) && (v3 == 5 || v3 == 2) && (v4 == 5 || v4 == 2)) {
                 create.classList.add('puppet')
                 clearSlots()
+                puppet.value = 1
+                puppet.style.display = 'flex'
             } else if ((v1 == 4 || v1 == 1 || v1 == 6) && (v2 == 4 || v2 == 1 || v2 == 6) && (v3 == 4 || v3 == 1 || v3 == 6) && (v4 == 4 || v4 == 1 || v4 == 6)) {
                 create.classList.add('mirror')
                 clearSlots()
+                mirror.value = 1
+                mirror.style.display = 'flex'
             } else {
                 alert(phrase)
             }
@@ -744,13 +790,21 @@ function createObj() {
             if ((v1 == 5 || v1 == 3) && (v2 == 5 || v2 == 3) && (v3 == 5 || v3 == 3) && (v4 == 5 || v4 == 3)) {
                 create.classList.add('telephone')
                 clearSlots()
+                tel.value = 1
+                tel.style.display = 'flex'
             } else {
                 alert(phrase)
             }
         } else if (resultTypes == 8) {
             if ((v1 == 3 || v1 == 2 || v1 == 1) && (v2 == 3 || v2 == 2 || v2 == 1) && (v3 == 3 || v3 == 2 || v3 == 1) && (v4 == 3 || v4 == 2 || v4 == 1)) {
-                create.classList.add('cardboxToy')
-                clearSlots()
+                if (v1 == 2 && v2 == 2 && v3 == 2 && v4 == 2) {
+                    alert(phrase)
+                } else {
+                    create.classList.add('cardboxToy')
+                    clearSlots()
+                    cbToy.value = 1
+                    cbToy.style.display = 'flex'
+                }
             } else {
                 alert(phrase)
             }
@@ -758,6 +812,8 @@ function createObj() {
             if ((v1 == 5 || v1 == 6 || v1 == 7) && (v2 == 5 || v2 == 6 || v2 == 7) && (v3 == 5 || v3 == 6 || v3 == 7) && (v4 == 5 || v4 == 6 || v4 == 7)) {
                 create.classList.add('glassVase')
                 clearSlots()
+                gVase.value = 1
+                gVase.style.display = 'flex'
             } else {
                 alert(phrase)
             }
@@ -765,8 +821,12 @@ function createObj() {
             if ((v1 == 3 || v1 == 5 || v1 == 6) && (v2 == 3 || v2 == 5 || v2 == 6) && (v3 == 3 || v3 == 5 || v3 == 6) && (v4 == 3 || v4 == 5 || v4 == 6)) {
                 create.classList.add('tinDrum')
                 clearSlots()
+                tDrum.value = 1
+                tDrum.style.display = 'flex'
             } else if ((v1 == 2 || v1 == 5 || v1 == 6) && (v2 == 2 || v2 == 5 || v2 == 6) && (v3 == 2 || v3 == 5 || v3 == 6) && (v4 == 2 || v4 == 5 || v4 == 6)){
                 create.classList.add('toy1')
+                t1.value = 1
+                t1.style.display = 'flex'
                 clearSlots()
             } else {
                 alert(phrase)
@@ -775,6 +835,8 @@ function createObj() {
             if ((v1 == 1 || v1 == 2) && (v2 == 1 || v2 == 2) && (v3 == 1 || v3 == 2) && (v4 == 1 || v4 == 2)) {
                 create.classList.add('plasticRocket')
                 clearSlots()
+                pRocket.value = 1
+                pRocket.style.display = 'flex'
             } else {
                 alert(phrase)
             }
@@ -782,6 +844,8 @@ function createObj() {
             if ((v1 == 2 || v1 == 3 || v1 == 5) && (v2 == 2 || v2 == 3 || v2 == 5) && (v3 == 2 || v3 == 3 || v3 == 5) && (v4 == 2 || v4 == 3 || v4 == 5)) {
                 create.classList.add('stilt')
                 clearSlots()
+                stilt.value = 1
+                stilt.style.display = 'flex'
             } else {
                 alert(phrase)
             }
@@ -789,6 +853,8 @@ function createObj() {
             if ((v1 == 2 || v1 == 5) && (v2 == 2 || v2 == 5) && (v3 == 2 || v3 == 5) && (v4 == 2 || v4 == 5)) {
                 create.classList.add('toy2')
                 clearSlots()
+                t2.value = 1
+                t2.style.display = 'flex'
             } else {
                 alert(phrase)
             }
@@ -796,6 +862,8 @@ function createObj() {
             if ((v1 == 4 || v1 == 1 || v1 == 6) && (v2 == 4 || v2 == 1 || v2 == 6) && (v3 == 4 || v3 == 1 || v3 == 6) && (v4 == 4 || v4 == 1 || v4 == 6)) {
                 create.classList.add('glassBlack')
                 clearSlots()
+                gBlack.value = 1
+                gBlack.style.display = 'flex'
             } else {
                 alert(phrase)
             }
@@ -803,6 +871,8 @@ function createObj() {
             if ((v1 == 1 || v1 == 2 || v1 == 6) && (v2 == 1 || v2 == 2 || v2 == 6) && (v3 == 1 || v3 == 2 || v3 == 6) && (v4 == 1 || v4 == 2 || v4 == 6)) {
                 create.classList.add('cardboardTv')
                 clearSlots()
+                cbTv.value = 1
+                cbTv.style.display = 'flex'
             } else {
                 alert(phrase)
             }
@@ -830,7 +900,7 @@ function createObj() {
     else {
         alert(alertPh)
     }
-
+    updatePhrase()
 }
 
 function opencloseControls() {
@@ -840,4 +910,112 @@ function opencloseControls() {
 
 function helpBar() {
     hBar.classList.toggle('hBarOpen')
+}
+
+function G2DEVMode() {
+    rDoll.style.display = 'flex'
+    gVase.style.display = 'flex'
+    gBlack.style.display = 'flex'
+    mirror.style.display = 'flex'
+    cbToy.style.display = 'flex'
+    puppet.style.display = 'flex'
+    cbTv.style.display = 'flex'
+    tel.style.display = 'flex'
+    t2.style.display = 'flex'
+    t1.style.display = 'flex'
+    pRocket.style.display = 'flex'
+    tDrum.style.display = 'flex'
+    stilt.style.display = 'flex'
+    DEVMode = true
+    updatePhrase()
+}
+
+//Verificar valores no site com DEV Mode
+
+function viewCardboxValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('Cardbox value is: 1')
+        } else {
+            alert('O Valor da caixa de papelão é: 1')
+        }
+    }
+}
+
+function viewPlasticBottleValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('Plastic bottle value is: 2')
+        } else {
+            alert('O Valor da garrafa de plastico é: 2')
+        }
+    }
+}
+
+function viewMetalCanValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('Metal can value is: 3')
+        } else {
+            alert('O Valor da lata de metal é: 3')
+        }
+    }
+}
+
+function viewGlassPaneValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('Glass pane value is: 4')
+        } else {
+            alert('O Valor do painel de vidro é: 4')
+        }
+    }
+}
+
+function viewRagValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('Rag value is: 5')
+        } else {
+            alert('O Valor do pano é: 5')
+        }
+    }
+}
+
+function viewCrumpPaperValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('Crumped paper value is: 6')
+        } else {
+            alert('O Valor do papel amassado é: 6')
+        }
+    }
+}
+
+function viewGlassBottleValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('Glass bottle value is: 7')
+        } else {
+            alert('O Valor da garrafa de vidro é: 7')
+        }
+    }
+}
+
+function viewRDollValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Rag Doll is: 17')
+        } else {
+            alert('O Valor da soma para se criar a Boneca de Pano é: 17')
+        }
+    }
 }
