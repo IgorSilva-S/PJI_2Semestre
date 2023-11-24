@@ -1002,6 +1002,7 @@ section h1 {
     transition-duration: .3s;
     position: relative;
     margin: 30px 0;
+    cursor: pointer;
 }
 
 .navAbUs h2::after {
@@ -1054,6 +1055,7 @@ section h1 {
 .intNames {
     margin: 10px 0;
     position: relative;
+    cursor: pointer;
 }
 
 .intNames::after {
