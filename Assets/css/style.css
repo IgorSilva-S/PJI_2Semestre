@@ -961,15 +961,15 @@ section .sectionImages {
 }
 
 #igor .personImage {
-    background-color: #8706d4;
+    background-image: url(../img/TeamImage/Igor.jpeg)
 }
 
 #nicholas .personImage {
-    background-color: red;
+    background-image: url(../img/TeamImage/Nicholas.jpg)
 }
 
 #jussara .personImage {
-    background-image: url(../img/TeamImage/user.png);
+    background-image: url(../img/TeamImage/Jussara.png);
 }
 
 .sectionImages img:hover {
