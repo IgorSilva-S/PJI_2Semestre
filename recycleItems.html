@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="header">Futuro em Ação: Criação reciclável</title>
     <link rel="stylesheet" href="Assets/css/recycleItems.css">
+    <link rel="shortcut icon" href="Assets/img/Logo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -52,7 +53,7 @@
     <div class="helpBar" game2-helpBar>
         <div class="titleHelp">
             <p style="font-size: 50px; cursor: pointer;" onclick="helpBar()">&#215;</p>
-            <p>Lista de Formações disponíveis</p>
+            <p id="barTitle">Lista de formações disponíveis</p>
         </div>
         <div class="alertBox">
 
@@ -199,6 +200,17 @@
             <div class="elm metal" oncontextmenu="viewMetalCanValue(event)"></div>
             <div class="elmT">=</div>
             <div class="elm stilt" oncontextmenu="viewStiltValue(event)"></div>
+        </div>
+        <div class="tipsBox" id="gLamp">
+            <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm paper" oncontextmenu="viewCardboxValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm crumpPaper" oncontextmenu="viewCrumpPaperValue(event)"></div>
+            <div class="elmT">+</div>
+            <div class="elm gBottle" oncontextmenu="viewGlassBottleValue(event)"></div>
+            <div class="elmT">=</div>
+            <div class="elm glassLampshade" oncontextmenu="viewGlassLampshadeValue(event)"></div>
         </div>
 
     </div>

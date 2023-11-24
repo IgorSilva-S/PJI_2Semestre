@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuro em Ação: Lixeiras</title>
+    <title>Future in Action: Recycling bins</title>
     <link rel="stylesheet" href="Assets/css/recycleBin.css">
     <link rel="shortcut icon" href="Assets/img/Logo.png" type="image/x-icon">
 </head>
+
 <body>
 
     <div class="clouds"></div>
     <div class="itemSelected">
-        <p>Lixo pego:</p>
+        <p>Grabbed trash:</p>
         <div class="viewer" trash-viewer></div>
     </div>
     <div class="points">
-        Pontuação: <span id="points">0</span> pontos
+        Score: <span id="points">0</span> points
         <p class="newScore" id="alertPoint"></p>
     </div>
     <div class="controls">
         <div class="openandcloseControls" onclick="opencloseControls()">
             <img src="Assets/img/Arrow.png" alt="">
         </div>
-        <button class="closeButton" onclick="location.href = 'cuideVcMsm.html'">&#215;</button>
+        <button class="closeButton" onclick="location.href = 'doItYourselfEnUs.html'">&#215;</button>
         <button onclick="location.reload()">&#8635;</button>
         <button onclick="helpBar()">&#63;</button>
         <button class="resetPosi" onclick="resetPosi()"></button>
@@ -39,13 +41,16 @@
     </div>
     <div class="rBar">
         <button class="closeButton" onclick="helpBar()">&#215;</button>
-        <h1>Como jogar?</h1>
-        <p>Clique no lixo que está na sua tela, ao clicar, ele estará selecionado.</p>
-        <p>Ao selecionar (pegar) o lixo, clique na lixeira correta dele. Cada lixo colocado em uma lixeira correta lhe dá dois pontos, nas erradas, você perde 3 pontos</p>
-        <p>Os pontos podem ser vistos na parte de pontuação, abaixo do visualizador de lixo.</p>
+        <h1>How to play?</h1>
+        <p>Click on the trash that is on your screen, when you click it, it will be selected.</p>
+        <p>When selecting (grabbing) the trash, click on the correct trash can from it. Each garbage placed in a correct bin
+        gives two points, in the wrong ones, you lose 3 points</p>
+        <p>Your score can be seen in the scoring part, below the trash viewer.</p>
         <br>
-        <p>Caso o lixo apareça em um local onde seja difícil pegá-lo, aperte no reiniciar pontilhado, assim, colocando o mesmo lixo em outro local</p>
+        <p>If the garbage appears in a place where it is difficult to pick it up, press the dotted reset, thus, placing the
+        same garbage in another location</p>
     </div>
-    <script src="Assets/js/recycleBin.js"></script>
+    <script src="Assets/js/recycleBinEnUs.js"></script>
 </body>
+
 </html>

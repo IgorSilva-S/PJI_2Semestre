@@ -77,7 +77,8 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 8px 0 0 0;
-        backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(250, 250, 250, 0.4);
 }
 
 .itemSelected p {
@@ -106,19 +107,41 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     backdrop-filter: blur(5px);
+    background-color: rgba(250, 250, 250, 0.4);
+    transition-duration: .4s;
+    border-bottom-left-radius: 8px;
 }
 
 .points span {
     margin: 0 5px;
 }
 
+.newScore {
+    margin: 20px 0;
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+.goodScore {
+    color: green;
+    opacity: 1;
+    transition-duration: .4s;
+}
+
+.badScore {
+    color: red;
+    opacity: 1;
+    transition-duration: .4s;
+}
+
 .returnToPrincipal {
     position: absolute;
     right: 0;
-    top:500px;
+    top: 500px;
     border: 2px solid #555;
     width: 250px;
     height: 100px;
@@ -188,15 +211,17 @@ body {
 }
 
 @keyframes clouds {
-0% {
-    left: 0;
-}
-50% {
-    left: -200%;
-}
-100% {
-    left: 0;
-}
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    100% {
+        left: 0;
+    }
 }
 
 .controls {
@@ -295,7 +320,7 @@ body {
 }
 
 .rBar button:hover {
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .rBar h1 {
@@ -308,4 +333,10 @@ body {
 
 .hBarOpen {
     right: 0%;
+}
+
+.resetPosi {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/GamesImage/RecycleBin/resetPosiB.png);
 }

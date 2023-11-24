@@ -40,6 +40,7 @@ const t1 = document.getElementById('t1')
 const pRocket = document.getElementById('pRocket')
 const tDrum = document.getElementById('tDrum')
 const stilt = document.getElementById('stilt')
+const gLamp = document.getElementById('gLamp')
 
 if (enStyle == 1) {
     phrase = 'There are no creations for the selected objects'
@@ -52,6 +53,7 @@ if (enStyle == 1) {
     comboPhraseNComplete = "There are still other combinations, keep creating!"
     comboPhraseComplete = "You found all the available combinations! Congratulations!"
     comboDEV = "DEV Mode"
+    document.getElementById('barTitle').innerText = 'List of available formations'
 }
 
 /*Tipo de lixo - definição:
@@ -880,6 +882,11 @@ function createObj() {
                 clearSlots()
                 gBlack.value = 1
                 gBlack.style.display = 'flex'
+            } else if ((v1 == 1 || v1 == 6 || v1 == 7) && (v2 == 1 || v2 == 6 || v2 == 7) && (v3 == 1 || v3 == 6 || v3 == 7) && (v4 == 1 || v4 == 6 || v4 == 7)) {
+                create.classList.add('glassLampshade')
+                clearSlots()
+                gLamp.value = 1
+                gLamp.style.display = 'flex'
             } else {
                 alert(phrase)
             }
@@ -941,6 +948,7 @@ function G2DEVMode() {
     pRocket.style.display = 'flex'
     tDrum.style.display = 'flex'
     stilt.style.display = 'flex'
+    gLamp.style.display = 'flex'
     DEVMode = true
     hbarPhrase.innerText = comboDEV
     document.querySelector('.pauseB').style.display = 'flex'
@@ -949,7 +957,9 @@ function G2DEVMode() {
 function removeDEVMode() {
     hbarPhrase.innerText = ''
     document.querySelector('.pauseB').style.display = 'none'
+    if (paused) {
     pauseGame()
+    }
     rDoll.style.display = 'none'
     gVase.style.display = 'none'
     gBlack.style.display = 'none'
@@ -963,6 +973,7 @@ function removeDEVMode() {
     pRocket.style.display = 'none'
     tDrum.style.display = 'none'
     stilt.style.display = 'none'
+    gLamp.style.display = 'none'
     DEVMode = false
 }
 
@@ -1188,6 +1199,17 @@ function viewStiltValue(event) {
     }
 }
 
+function viewGlassLampshadeValue(event) {
+    if (DEVMode) {
+        event.preventDefault()
+        if (enStyle == 1) {
+            alert('The sum value to get Glass Lampshade is: 15')
+        } else {
+            alert('O Valor da soma para se criar o Abajur de Vidro é: 15')
+        }
+    }
+}
+
 function pauseGame() {
     if (DEVMode) {
         if (!paused) {
@@ -1213,7 +1235,12 @@ function pauseGame() {
 function changeValue1(event) {
     if (DEVMode) {
         event.preventDefault() 
-        let newValue = prompt(`Digite o novo valor para o 1º Elemento (0 até 6)`)
+        let newValue
+        if (enStyle == 1) {
+            newValue = prompt(`Type the new value to the 1º Element (from 0 to 6)`)
+        } else {
+            newValue = prompt(`Digite o novo valor para o 1º Elemento (0 até 6)`)
+        }
         newValue = parseInt(newValue)
         tr1.className = 'trashs'
         if (newValue == 0) {
@@ -1238,7 +1265,11 @@ function changeValue1(event) {
             tr1.classList.add('gBottle')
             tr1.value = 6
         } else {
-            alert("Valor não se encaixa. Veja os valores na lista de criações")
+            if (enStyle == 1) {
+                alert("Value does not fit. See the values in the creation list.")
+            } else {
+                alert("Valor não se encaixa. Veja os valores na lista de criações")
+            }
         }
     }
 }
@@ -1246,7 +1277,12 @@ function changeValue1(event) {
 function changeValue2(event) {
     if (DEVMode) {
         event.preventDefault() 
-        let newValue = prompt(`Digite o novo valor para o 2º Elemento (0 até 6)`)
+        let newValue
+        if (enStyle == 1) {
+            newValue = prompt(`Type the new value to the 2º Element (from 0 to 6)`)
+        } else {
+            newValue = prompt(`Digite o novo valor para o 2º Elemento (0 até 6)`)
+        }
         newValue = parseInt(newValue)
         tr2.className = 'trashs t2'
         if (newValue == 0) {
@@ -1271,7 +1307,11 @@ function changeValue2(event) {
             tr2.classList.add('gBottle')
             tr2.value = 6
         } else {
-            alert("Valor não se encaixa. Veja os valores na lista de criações")
+            if (enStyle == 1) {
+                alert("Value does not fit. See the values in the creation list.")
+            } else {
+                alert("Valor não se encaixa. Veja os valores na lista de criações")
+            }
         }
     }
 }
@@ -1279,7 +1319,12 @@ function changeValue2(event) {
 function changeValue3(event) {
     if (DEVMode) {
         event.preventDefault() 
-        let newValue = prompt(`Digite o novo valor para o 3º Elemento (0 até 6)`)
+        let newValue
+        if (enStyle == 1) {
+            newValue = prompt(`Type the new value to the 3º Element (from 0 to 6)`)
+        } else {
+            newValue = prompt(`Digite o novo valor para o 3º Elemento (0 até 6)`)
+        }
         newValue = parseInt(newValue)
         tr3.className = 'trashs t3'
         if (newValue == 0) {
@@ -1304,7 +1349,11 @@ function changeValue3(event) {
             tr3.classList.add('gBottle')
             tr3.value = 6
         } else {
-            alert("Valor não se encaixa. Veja os valores na lista de criações")
+            if (enStyle == 1) {
+                alert("Value does not fit. See the values in the creation list.")
+            } else {
+                alert("Valor não se encaixa. Veja os valores na lista de criações")
+            }
         }
     }
 }
@@ -1312,7 +1361,12 @@ function changeValue3(event) {
 function changeValue4(event) {
     if (DEVMode) {
         event.preventDefault() 
-        let newValue = prompt(`Digite o novo valor para o 4º Elemento (0 até 6)`)
+        let newValue
+        if (enStyle == 1) {
+            newValue = prompt(`Type the new value to the 4º Element (from 0 to 6)`)
+        } else {
+            newValue = prompt(`Digite o novo valor para o 4º Elemento (0 até 6)`)
+        }
         newValue = parseInt(newValue)
         tr4.className = 'trashs t4'
         if (newValue == 0) {
@@ -1337,7 +1391,11 @@ function changeValue4(event) {
             tr4.classList.add('gBottle')
             tr4.value = 6
         } else {
-            alert("Valor não se encaixa. Veja os valores na lista de criações")
+            if (enStyle == 1) {
+                alert("Value does not fit. See the values in the creation list.")
+            } else {
+                alert("Valor não se encaixa. Veja os valores na lista de criações")
+            }
         }
     }
 }

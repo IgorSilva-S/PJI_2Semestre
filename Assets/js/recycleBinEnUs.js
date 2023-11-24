@@ -13,7 +13,6 @@ let leftPosi, topPosi = 0
 let grabbed = false
 const hBar = document.querySelector('.rBar')
 const alertPoint = document.getElementById('alertPoint')
-let DEVMode = false
 
 changeTrash()
 
@@ -60,7 +59,7 @@ function paperPicker() {
         if (typeofTrash == 0) {
             points = points + 2;
             alertPoint.classList.toggle('goodScore')
-            alertPoint.innerText = '+2 Pontos!'
+            alertPoint.innerText = '+2 Points!'
             setTimeout(() => {
                 alertPoint.classList.toggle('goodScore')
                 setTimeout(() => {
@@ -70,7 +69,7 @@ function paperPicker() {
         } else {
             points = points - 3;
             alertPoint.classList.toggle('badScore')
-            alertPoint.innerText = '-3 Pontos :/'
+            alertPoint.innerText = '-3 Points :/'
             setTimeout(() => {
                 alertPoint.classList.toggle('badScore')
                 setTimeout(() => {
@@ -90,7 +89,7 @@ function plasticPicker() {
         if (typeofTrash == 1) {
             points = points + 2;
             alertPoint.classList.toggle('goodScore')
-            alertPoint.innerText = '+2 Pontos!'
+            alertPoint.innerText = '+2 Points!'
             setTimeout(() => {
                 alertPoint.classList.toggle('goodScore')
                 setTimeout(() => {
@@ -100,7 +99,7 @@ function plasticPicker() {
         } else {
             points = points - 3;
             alertPoint.classList.toggle('badScore')
-            alertPoint.innerText = '-3 Pontos :/'
+            alertPoint.innerText = '-3 Points :/'
             setTimeout(() => {
                 alertPoint.classList.toggle('badScore')
                 setTimeout(() => {
@@ -120,7 +119,7 @@ function metalPicker() {
         if (typeofTrash == 2) {
             points = points + 2;
             alertPoint.classList.toggle('goodScore')
-            alertPoint.innerText = '+2 Pontos!'
+            alertPoint.innerText = '+2 Points!'
             setTimeout(() => {
                 alertPoint.classList.toggle('goodScore')
                 setTimeout(() => {
@@ -130,7 +129,7 @@ function metalPicker() {
         } else {
             points = points - 3;
             alertPoint.classList.toggle('badScore')
-            alertPoint.innerText = '-3 Pontos :/'
+            alertPoint.innerText = '-3 Points :/'
             setTimeout(() => {
                 alertPoint.classList.toggle('badScore')
                 setTimeout(() => {
@@ -150,7 +149,7 @@ function glassPicker() {
         if (typeofTrash == 3) {
             points = points + 2;
             alertPoint.classList.toggle('goodScore')
-            alertPoint.innerText = '+2 Pontos!'
+            alertPoint.innerText = '+2 Points!'
             setTimeout(() => {
                 alertPoint.classList.toggle('goodScore')
                 setTimeout(() => {
@@ -160,7 +159,7 @@ function glassPicker() {
         } else {
             points = points - 3;
             alertPoint.classList.toggle('badScore')
-            alertPoint.innerText = '-3 Pontos :/'
+            alertPoint.innerText = '-3 Points :/'
             setTimeout(() => {
                 alertPoint.classList.toggle('badScore')
                 setTimeout(() => {
@@ -180,7 +179,7 @@ function organicPicker() {
         if (typeofTrash == 4) {
             points = points + 2;
             alertPoint.classList.toggle('goodScore')
-            alertPoint.innerText = '+2 Pontos!'
+            alertPoint.innerText = '+2 Points!'
             setTimeout(() => {
                 alertPoint.classList.toggle('goodScore')
                 setTimeout(() => {
@@ -190,7 +189,7 @@ function organicPicker() {
         } else {
             points = points - 3;
             alertPoint.classList.toggle('badScore')
-            alertPoint.innerText = '-3 Pontos :/'
+            alertPoint.innerText = '-3 Points :/'
             setTimeout(() => {
                 alertPoint.classList.toggle('badScore')
                 setTimeout(() => {
@@ -223,13 +222,13 @@ function resetPosi() {
 
 function G1DEVMode() {
     DEVMode = true
-    alert('Modo Desenvolvedor ativado')
+    alert('Dev Mode activated')
 }
 
 function changeTrashType(event) {
     if (DEVMode) {
         event.preventDefault()
-        typeofTrash = prompt('Digite o novo valor do elemento: \n 0 - Papel; \n 1 - Plástico; \n 2 - Metal; \n 3 - Vidro e; \n 4 - Orgânico. \n Qualquer valor além desses pode resultar em perda do elemento e chance de perda de ponto em 100%')
+        typeofTrash = prompt('Type the new value of the element: \n 0 - Paper; \n 1 - Plastic; \n 2 - Metal; \n 3 - Glass and; \n 4 - Organic. \n Any value beyond these can result in loss of the element and chance of losing point by 100%')
         typeofTrash = parseInt(typeofTrash)
         trash.className = 'item'
         if (typeofTrash == 0) {
@@ -248,5 +247,5 @@ function changeTrashType(event) {
 
 function removeDEVMode() {
     DEVMode = false
-    alert('Modo Desenvolvedor desativado')
+    alert('Dev Mode unactived')
 }

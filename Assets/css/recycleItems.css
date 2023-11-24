@@ -328,6 +328,10 @@
     background-image: url(../img/GamesImage/RecycleItems/RecycledItems/cardboardTv.png);
 }
 
+.glassLampshade {
+    background-image: url(../img/GamesImage/RecycleItems/RecycledItems/GlassLampshade.png);
+}
+
 .helpBar {
     width: 40%;
     height: 100%;
